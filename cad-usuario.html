@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="/style.css">
   <title>Cadastrar</title>
 </head>
 
@@ -10,36 +11,33 @@
   <h2>Cadastrar</h2>
 
   <form action="" class="form-cadastro-usuario">
-    <div>
-      <label for="nome-usuario">Nome</label>
-      <input type="text" name="nome-usuario" id="nome-usuario" value="Digite seu nome de usuário">
-    </div>
-    <div>
-      <label for="email-usuario">Email</label>
-      <input type="email" name="email-usuario" id="email-usuario" value="Digite seu e-mail">
-    </div>
-    <div>
-      <label for="senha-usuario">Senha</label>
-      <input type="senha" name="senha-usuario" id="senha-usuario" value="Escolha sua senha">
-    </div>
-    <div>
-      <label for="data-nasc-usuario">Data de Nascimento</label>
-      <input type="date" name="data-nasc-usuario" id="data-nasc-usuario">
-    </div>
-    <div>
-      <label for="sexo-usuario">Sexo</label>
+    <div><label for="nome-usuario">Nome</label></div>
+    <div><input type="text" class="campo-cadastro" name="nome-usuario" id="nome-usuario" value="Digite seu nome de usuário"></div>
+
+    <div><label for="email-usuario">Email</label></div>
+    <div><input type="email" class="campo-cadastro" name="email-usuario" id="email-usuario" value="Digite seu e-mail"></div>
+
+    <div><label for="senha-usuario">Senha</label></div>
+    <div><input type="senha" class="campo-cadastro" name="senha-usuario" id="senha-usuario" value="Escolha sua senha"></div>
+
+    <div><label for="data-nasc-usuario">Data de Nascimento</label></div>
+    <div><input type="date" class="campo-cadastro" name="data-nasc-usuario" id="data-nasc-usuario"></div>
+
+    <div><label for="sexo-usuario">Sexo</label></div>
+    <div id="radio-button-sexo">
       <input type="radio" name="sexo-usuario" value="Fem">Feminino
       <input type="radio" name="sexo-usuario" value="Masc">Masculino
     </div>
+
+    <div><label for="escolaridade-usuario">Grau de Escolaridade</label></div>
     <div>
-      <label for="escolaridade-usuario">Grau de Escolaridade</label>
-      <select name="escolaridade-usuario" id="escolaridade-usuario">
+      <select class="campo-cadastro" name="escolaridade-usuario" id="escolaridade-usuario">
           <option value="1">Ensino Fundamental (Básico)</option>
           <option value="2">Ensino Médio (Secundário)</option>
           <option value="3">Ensino Superior</option>
         </select>
-    </div>
-    <input type="submit" value="Cadastrar">
+    </div><br/>
+    <input type="submit" id="btn-cadastrar" value="Cadastrar">
   </form>
 
 </body>

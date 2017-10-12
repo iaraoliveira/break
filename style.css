@@ -1,0 +1,22 @@
+body {
+  background-color: #fafafa;
+  color: #414141;
+
+}
+
+.campo-cadastro {
+  height: 35px;
+  width: 250px;
+  border-radius: 7pt;
+  background-color: #eeeeee;
+  margin-bottom: 7px;
+}
+
+#radio-button-sexo {
+  margin-bottom: 7px;
+}
+
+#btn-cadastrar {
+  height: 35px;
+  border-radius: 7pt;
+}
