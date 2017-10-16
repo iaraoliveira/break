@@ -1,0 +1,158 @@
+/* login.css */
+
+body {
+	margin: 0px;
+	background-color: #009bdb;
+	font-family: 'Montserrat', sans-serif;	
+}
+
+.box-that{
+
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: -1;
+	box-shadow: -1px -1px 25px #7d7c81;
+	
+	background-color: #fafafa;
+	padding: 200px 50px 50px 400px;
+	text-align: right;
+}
+
+#sub-box {
+	/*background-color: #fff;*/
+	padding: 50px;
+	color: #3a3d3c;
+}
+
+label{
+	padding: 10px;
+}
+
+input {
+	min-width: 300px;
+	min-height: 40px;
+	background-color: #fff;
+	padding: 3px 10px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 0px 0px 9px #efefef;
+	margin: 10px 0px 0px 0px;
+	
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #0e0e0e;
+	font-size: 11pt;
+}
+
+#down-inputs {
+	margin-top: 20px
+}
+
+a {
+	color: #009bdb;
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #45ADA8;
+	font-weight: 500;
+}
+
+a:visited{
+	color: #009bdb;
+	
+}
+
+#button-entry {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: #fafafa;
+	
+	cursor: pointer;
+	border-radius: 5px;
+	min-width: 150px;
+	min-height: 35px;
+	background-color: #009bdb;
+}
+
+.btn_access {
+	background-color: #009bdb;
+	
+}
+
+img {
+	
+	font-size: 0pt;
+	
+}
+
+#hominho{
+	float: left;
+	position: absolute;
+	left: 0;
+
+	margin-left: -170px;
+	margin-top: -80px;
+	
+	max-width: 400px;
+}
+
+/* por em um arquivo externo */
+@media screen and (max-height: 560px) {
+	
+	.box-that {
+		padding-top: 100px;
+		box-shadow: none;
+	}
+	
+}
+@media screen and (max-height: 460px) and (orientation: landscape) {
+	body {
+		background-color: #fafafa;
+		
+	}
+	.box-that {
+		padding-top: 0px;
+		box-shadow: none;
+	}
+	
+}
+
+@media screen and (max-width: 960px) {
+	#hominho {
+		margin-left: 0px;
+	}
+	input {
+		margin-bottom: 10px;
+	}
+	
+}
+
+@media screen and (max-width: 870px) {
+	#hominho {
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width: 551px) {
+	.box-that {
+		padding: 0px;
+	}
+	
+	input {
+		min-width: 220px;
+	}
+}
+@media screen and (max-width: 551px) {
+	.box-that {
+		bottom: 1;
+	}
+}
+
+

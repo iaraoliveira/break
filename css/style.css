@@ -1,0 +1,252 @@
+body {
+	font-family: 'Montserrat', sans-serif;	
+	margin: 0px;
+	background: url("../img/Got-Nothing-Else-To-Do.jpg") no-repeat bottom center;
+    background-color: #fbf3d7;
+    background-size: cover;
+    background-position: top center;
+}
+
+.main {
+	margin: auto;
+	margin-bottom: 0px;
+	font-family: 'Montserrat', sans-serif;
+	z-index: -1;
+}
+
+.back_main {
+	background-color: #fbf3d7;
+	position: relative;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+
+#grad {	
+	background: linear-gradient(180deg, rgba(251,0,0,0), rgba(251,243,215,0.8), rgba(251,243,215, 1));
+	margin: auto;
+}
+
+#content {
+	background-color: #fbf3d7;
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 800px;	
+	margin: auto;
+	padding: 10px;
+}
+
+#header {
+	box-shadow: 0px -5px 25px #D2CDCD;
+	background-color: #fbf3d7;
+	min-height: 100px;
+	min-width: 100px;
+	max-width: 800px;
+	margin: auto;
+	padding: 10px;
+	z-index: 1;
+}
+
+.title {
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 800px;
+	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+h1 {
+	margin: 0px;
+	font-size: 40pt;
+	color: #fafafa;
+	font-weight: 800;
+}
+
+h2 {
+	margin-right: 10px;
+	margin-bottom: 0px;
+	font-weight: 500;
+	font-size: 24pt;
+	color: #333333;
+	text-align: right;
+}
+
+h3 {
+	margin-left: 10px;
+	font-weight: 400;
+	font-size: 16pt;
+	color: #fafafa;
+	text-align: left;
+}
+
+#header_space1 {
+	margin-top: -120px;	
+	padding: 5px 10px 5px 20px;
+	margin-left: 10px;
+	margin-right: 400px;
+	background-color: #02858F;
+	box-shadow: 2px 2px 10px #333;
+}
+#header_detalhe {
+	padding: 4px 10px 5px 10px;
+	margin: 0px -50px 0px 100px;
+	
+	background-color: #fafafa;
+	box-shadow: 0px 0px 5px #02858F;
+}
+
+#header_space2 {
+	margin-top: 10px;
+	padding: 0px 10px 10px 100px;
+	margin-right: 10px;
+}
+
+.header_space2 {
+	text-align: right;
+	margin: 0px;
+	font-size: 10pt;
+	padding: 0px 10px 0px 0px;
+}
+
+p {
+	color: #333;
+	text-align: justify;
+	font-weight: 300;
+}
+
+#text_content {
+	padding: 10px 50px 10px 50px;
+	letter-spacing: 0.1px;
+	line-height: 1.4;
+	text-indent: 50px;
+}
+
+.sobre_topo_imagem {
+	/*background-image: linear-gradient(-180deg, transparent 0%, rgba(0,0,0,0.35) 80%);*/
+	background-size: cover;
+    background-position: 0px -150px;
+	background-position: center;
+	
+	margin: auto;
+	margin-right: 0px;
+	margin-top: 50px;
+	
+	box-shadow: 0px 0px 210px #333333;
+	
+}
+
+.sobre_topo {
+	height: 300px;
+}
+
+#abinha a{
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	overflow: hidden;
+	color: #fafafa;
+	text-overflow: ellipsis;
+	font-size: 20pt;
+	font-weight: 500;
+	
+	text-decoration: none;
+	cursor: crosshair;
+}
+
+.abas {
+	max-width: 700px;
+	min-width: 100px;
+	min-height: 100px;
+	margin: auto auto -50px auto;
+	position: relative;
+	z-index: -1;
+}
+
+#abinha {
+	border-radius: 10px;
+	background-color: #fafafa;
+	max-width: 200px;
+	margin: auto auto -10px 20px;
+	
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 20px;
+	
+	background-color: #009bdb;
+	float: left;
+}
+
+#abinha a:hover {
+	font-size: 100;
+	
+	
+}
+	
+.topo_imagem {
+	background: url("../img/man_beard_enterprise.jpg") no-repeat bottom center;
+    background-color: #fbf3d7;
+    background-size: cover;
+    background-position: 0px -150px;
+	background-position: center;
+	
+	margin: auto;
+	margin-top: 50px;
+
+	box-shadow: 0px 0px 210px #333333;
+	min-height: 200px;
+	min-width: 500px;
+	max-width: 1000px;
+	max-height: 300px;
+	position: relative;
+	z-index: -1;
+}
+
+.back_rodape {
+	background-color: #fbf3d7;
+	margin: 0px;
+	margin-bottom: 0px;
+}
+
+#rodape {
+	background-image: linear-gradient(-180deg, transparent 0%, rgba(1,89,131,0.35) 80%);
+	background-color: #02858F;
+	margin: auto;
+	margin-bottom: 0px;
+	padding: 10px;
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 800px;	
+}
+
+#bg_video{
+	
+	
+	/*background: url(images/torre.jpg) no-repeat;*/
+	background-size: cover; 
+	box-shadow: 2px 5px 20px #c3c3c3;
+	min-height: 100px;
+	min-width: 200px;
+	max-width: 1000px;
+	max-height: 300px;
+}
+
+.videozin {
+	margin: auto;
+	padding: 10px;
+	position: relative;
+	
+	
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+	
+	min-height: 100px;
+	min-width: 200px;
+	max-width: 1000px;
+	max-height: 300px;
+}
