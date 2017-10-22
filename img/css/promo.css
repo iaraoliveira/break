@@ -1,0 +1,145 @@
+/* promo.css */
+body {
+	margin: 0px;
+	background-color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+h1 {
+	color: #324c64;
+	font-size: 22pt;
+	letter-spacing: 1.6px;
+	font-weight: 500;
+}
+
+.header-left {
+	margin-top: -30px;
+	margin-left: 80px;
+	float: left;
+/*  position: absolute;
+	top: -30px;
+	left: 80px;*/
+
+}
+
+#header-logo {
+	max-width: 50px;
+	max-height: 50px;
+	float: left;
+}
+
+#title-header {
+	position: relative;
+	top: -10px;
+	left: 15px;
+	float: left;
+	font-weight: 300;
+	color: #279ecf;
+}
+
+#tabs {
+	margin-right: 50px;
+	
+	position: relative;
+	z-index: 1;
+	text-align: right;
+	
+}
+#tab {
+	padding: 8px 25px 15px 25px;
+	font-size: 15pt;
+	color: #fafafa;
+	text-decoration: none;
+	background-color: #279ecf;
+	border-radius: 8px;
+	margin: 0px 3px;
+	line-height: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	transition: box-shadow 0.5s;
+	transition: padding 0.1s;
+}
+
+a#tab:hover {
+	box-shadow: 0px 0px 20px rgba(104, 104, 104, 0.6);
+	padding: 10px 25px 19px 25px;
+}
+
+#icon {
+	position: relative;
+	top: 5px;
+	left: 6px;
+	max-width: 29px;
+	max-height: 29px;
+}
+
+.main {
+	margin: 50px 0px 0px 0px;
+	background-color: #fff;
+	
+}
+
+#note {	
+	min-width: 500px;
+	max-width: 520px;
+	min-height: 500px;
+	max-height: 800px;
+	
+	background-image: url("../img/notebook_promo.png");
+	 background-size: cover;
+    background-position: top left;
+	
+	float: left;
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	
+}
+
+#first_part {
+	margin: 0px;
+	padding: 100px;
+	min-height: 350px;
+	background-color: #fafafa;
+	box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
+	position: relative;
+	z-index: 2;
+}
+
+#first_cont {
+	position: absolute;
+	right: 550px;
+	top: 150px;
+	
+}
+
+#first {	
+	margin: auto;
+	padding: 40px;
+	text-align: right;
+	
+}
+
+#force_unlished {
+	color: #fafafa;
+	text-decoration: none;
+	
+	background-color: #324c64;
+	padding: 15px 30px;
+	border-radius: 50px;
+	margin-left: 120px;
+	transition: box-shadow 0.5s;
+}
+
+a#force_unlished:hover {
+	box-shadow: 0px 0px 40px rgba(0,0,0,0.3);;
+}
+
+#second_part {
+	margin: 0px;
+	padding: 100px;
+	min-height: 350px;
+	background-color: #009bdb;
+	box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
+}
