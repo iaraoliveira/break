@@ -1,47 +1,53 @@
 <?php
-	/* login.php */
-	session_start();
+	/* index.php */
+	include 'header.php';
+	
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Página de Login">
+    <meta charset="UTF-8">
+	<meta name="description" content="Página principal">
 	<meta name="keywords" content="Break">
 	<meta name="author" content="Iara; Vitória; Luiz e; Vinícius J">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/feed.css">
-	<script type="text/javascript" src="js/feed.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="icon" href="https://lh3.googleusercontent.com/-iVcMZ5Oeclc/WXdX3bE0tWI/AAAAAAAAZFM/ZVPSzODFT8ArUjSyc_akglrvfZO57aS9gCL0BGAs/s530-p-rw/icon_break.png" size="32x32">
-	<title>	Break | Feed</title>
+	<title>	Break	 </title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#aba_stada").hover(function(){
+				document.getElementbyId("abinha").style.backgroundcolor = "blue";
+				//alert("It's Me :3");
+			},
+			function(){
+				//alert("Ué..");
+			}); 
+		});
+	</script>
 </head>
-<body onload="loading()">
-	<div class="top">
-		<a id="sair" href="logout.php">SAIR</a>
-	</div>
+<body>
 	<div class="topo_imagem">
-		<img src="img/break_logo_white_shadow.png" alt="a"  class="topo_imagem">
+		<div class="sobre_topo">
+			<div class="sobre_topo_imagem">
+			
+			</div>
+		</div>
+	</div>
+	
+	<div class="title">
+		<div id="header_space1">
+			<h1>Olá</h1>
+			<div id="header_detalhe">
+			
+			</div>
+		</div>
 	</div>
 	
 	<div class="main">
-		<div id="tabs">
-			<a href="" id="tab">PERFIL</a>
-			<a href="" id="tab" title="Seu caderno"> <img id="icon" src="img/notes.png" alt=""> </a>			
-			<a href="" id="tab" title="Buscar"> <img id="icon" src="img/seach.png" alt=""> </a>
-			
-			<div id="tab" style="border-radius: 20px 0px 0px 0px;">
-				<input type="text" title="Busque o que quiser ^^" placeholder="ex.: Cachorro Pensa?" autofocus />
-				<button id="busca" type="submit">
-					Buscar
-				</button>
-				<a title="Filtre melhor.." href="">
-					<img id="option" src="img/filtro.svg" alt="">
-				</a>
-			</div>
-		</div>
-		<div id="grad">	
+		<div id="grad">		
 			<div id="header">
 				<div id="header_space2">
 					<h2><strong>Header 2 </strong>| Um subtítulo para este exemplo</h2>

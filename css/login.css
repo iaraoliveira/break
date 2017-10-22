@@ -44,6 +44,11 @@ input {
 	font-weight: 400;
 	color: #0e0e0e;
 	font-size: 11pt;
+	
+}
+
+input#button-entry:hover {
+	box-shadow: 0px 0px 20px  rgba(0,0,0,0.3);
 }
 
 #down-inputs {
@@ -54,6 +59,7 @@ a {
 	color: #009bdb;
 	margin-right: 20px;
 	text-decoration: none;
+	
 }
 
 a:hover{
@@ -78,6 +84,7 @@ a:visited{
 	min-width: 150px;
 	min-height: 35px;
 	background-color: #009bdb;
+	transition: box-shadow 1s;
 }
 
 .btn_access {
@@ -86,7 +93,6 @@ a:visited{
 }
 
 img {
-	
 	font-size: 0pt;
 	
 }
