@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Página de Login">
+	<meta name="description" content="Feed de postagens">
 	<meta name="keywords" content="Break">
 	<meta name="author" content="Iara; Vitória; Luiz e; Vinícius J">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">

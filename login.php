@@ -39,7 +39,11 @@
 				</div>
 			</form>
 			
+			
 		</div> 
+		<div id="rodape">
+			<a href="promocional.php" title="Ma que cartso que é breakuro?" id="saiba_mais">O que é break?</a>
+		</div>
 	</div>
 
 </body>

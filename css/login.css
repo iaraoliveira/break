@@ -72,6 +72,15 @@ a:visited{
 	
 }
 
+#rodape {
+	padding: 0px 50px;
+}
+
+#saiba_mais {	
+	font-weight: 300;
+	
+}
+
 #button-entry {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
