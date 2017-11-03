@@ -66,14 +66,12 @@
 				<br/>
 				
 				<p class="formRight">
-				<span style="padding-right:100px">Lead Type: </span>
-
 					<select id="leadType" class="box2" name="lead_type">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
+						<option value="#"id="esc_input">Grau de Escolaridade</option>
+						<option value="1">Ensino fundamental</option>
+						<option value="2">Ensino médio</option>
+						<option value="3">Ensino Superior</option>
 					</select>
-					
 				</p>
 
 				<label id="termos">Clicando em "Cadastrar", você aceita o <a href="">Regulamento.</a></label>
