@@ -1,7 +1,0 @@
-Time : 21:42:51
-SQLSTATE[HY000]: General error: 2031 
-Raw SQL : select * from usuario where ds_email = :email and ds_senha = :senha
-
-Time : 21:42:37
-SQLSTATE[HY000]: General error: 2031 
-Raw SQL : select * from usuario where ds_email = :email and ds_senha = :senha
