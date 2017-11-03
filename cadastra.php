@@ -67,7 +67,7 @@
 				
 				<p class="formRight">
 					<select id="leadType" class="box2" name="lead_type">
-						<option value="#"id="esc_input">Grau de Escolaridade</option>
+						<option value="#" disabled selected>Grau de Escolaridade</option>
 						<option value="1">Ensino fundamental</option>
 						<option value="2">Ensino médio</option>
 						<option value="3">Ensino Superior</option>
