@@ -75,16 +75,6 @@
 					</select>
 					
 				</p>
-				
-				<div class="form-group">
-					<select class="form-control" id="exampleFormControlSelect1">
-						<option>Grau de es</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
-				</div>
 
 				<label id="termos">Clicando em "Cadastrar", você aceita o <a href="">Regulamento.</a></label>
 				
