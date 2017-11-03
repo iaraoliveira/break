@@ -1,6 +1,10 @@
 <?php
 	/* login.php */
 	session_start();
+	if(!$_SESSION['autenticado']){
+		/* Caso não, será redirecionando */
+		header("Location: promocional.php");		
+	}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -53,13 +57,12 @@
 		<div class="back_main">		
 			<div id="content">
 				<div id="text_content">
-					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna mi, vulputate at mauris sed,
-					posuere finibus massa. Morbi in sem metus. Curabitur consequat purus non nisl varius aliquet. Vestibulum
-					pulvinar efficitur dolor ut dapibus. Nam interdum pharetra erat, vitae facilisis odio tincidunt quis.
-					Maecenas gravida volutpat purus, sed euismod odio. Fusce in leo quam. Phasellus rhoncus eros vestibulum
-					ligula placerat semper. Vivamus consequat porttitor ante sed condimentum. Nam ante elit, interdum elementum
-					tristique at, vulputate vel ex. In in tincidunt arcu. Integer elit dolor, sodales vel facilisis eu, semper
-					vitae nisi.</p>
+					<p> Limit. 
+					Limit of the city, of patience, of the rope. Wake up! You'll do something about life.
+					In Aurelio it is what someone represents to stimulate, to love life. I do not have.
+					Maybe I can buy it one day. When it's sunny it's always cooler. The different is the same.
+					I think Schopenhauer makes a lot of sense and Baudelaire is completely crazy. Everything ends.
+					The sooner the better. I do not like scars...</p>
 				</div>
 			</div>
 		</div>

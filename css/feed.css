@@ -1,3 +1,13 @@
+/* para as categorias */
+/*
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+*/
+
 body {
 	font-family: 'Montserrat', sans-serif;	
 	margin: 0px;

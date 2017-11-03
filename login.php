@@ -34,7 +34,7 @@
 				<input type="password" title="Insira a senha" id="pass_input" required name="senha"/> 
 				<br/>
 				<div id="down-inputs">
-					<a href="#" title="Crie uma conta já">Quero criar uma conta.</a>
+					<a href="cadastra.php" title="Crie uma conta já">Quero criar uma conta.</a>
 					<input type="submit" id="button-entry" value="Entrar"/>
 				</div>
 			</form>
