@@ -46,12 +46,53 @@
 				<label for="s_name_input">Sobrenome</label>
 				<input type="text" id="s_name_input" title="Sobrenome" placeholder="ex.: Skybreaker" required name="s_name_input"/> 
 				<br/>
-			
+				
+				<label for="email_input">Email</label>
+				<input type="text" id="email_input" title="Email" placeholder="ex.: luke@skybreaker" required name="email_input"/> 
+				<br/>
+				
+				<label for="sex_input">Sexo</label>
+				<div>
+					<label class="radio-inline">
+						<input type="radio" class="radio" name="optradio">Leia
+					</label>
+					<label class="radio-inline">
+						<input type="radio" class="radio" name="optradio">Luke
+					</label>
+				</div>
+				<br/>
+				
+				<input type="date" id="data_input" title="Data" placeholder="Ano de Nascimento" required name="email_input"/> 
+				<br/>
+				
+				<p class="formRight">
+				<span style="padding-right:100px">Lead Type: </span>
+
+					<select id="leadType" class="box2" name="lead_type">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+					
+				</p>
+				
+				<div class="form-group">
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>Grau de es</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</div>
+
+				<label id="termos">Clicando em "Cadastrar", você aceita o <a href="">Regulamento.</a></label>
 				
 				<div id="down-inputs">
 					<a href="login.php" title="Entrar">Já sou um jedi.</a>
 					<input type="submit" id="button-entry" title="wanna be a jedi, now." value="CADASTRAR"/>
 				</div>
+				
 			</form>
 			
 			
