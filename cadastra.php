@@ -46,41 +46,12 @@
 				<label for="s_name_input">Sobrenome</label>
 				<input type="text" id="s_name_input" title="Sobrenome" placeholder="ex.: Skybreaker" required name="s_name_input"/> 
 				<br/>
-				
-				<label for="email_input">Email</label>
-				<input type="text" id="email_input" title="Email" placeholder="ex.: luke@skybreaker" required name="email_input"/> 
-				<br/>
-				
-				<label for="sex_input">Sexo</label>
-				<div>
-					<label class="radio-inline">
-						<input type="radio" class="radio" name="optradio">Leia
-					</label>
-					<label class="radio-inline">
-						<input type="radio" class="radio" name="optradio">Luke
-					</label>
-				</div>
-				<br/>
-				
-				<input type="date" id="data_input" title="Data" placeholder="Ano de Nascimento" required name="email_input"/> 
-				<br/>
-				
-				<p class="formRight">
-					<select id="leadType" class="box2" name="lead_type">
-						<option value="#" disabled selected>Grau de Escolaridade</option>
-						<option value="1">Ensino fundamental</option>
-						<option value="2">Ensino médio</option>
-						<option value="3">Ensino Superior</option>
-					</select>
-				</p>
-
-				<label id="termos">Clicando em "Cadastrar", você aceita o <a href="">Regulamento.</a></label>
+			
 				
 				<div id="down-inputs">
 					<a href="login.php" title="Entrar">Já sou um jedi.</a>
 					<input type="submit" id="button-entry" title="wanna be a jedi, now." value="CADASTRAR"/>
 				</div>
-				
 			</form>
 			
 			
