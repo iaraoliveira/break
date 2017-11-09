@@ -1,7 +1,7 @@
 <?php
 	/* index.php */
 	/* include 'header.php';*/
-	
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@
 			},
 			function(){
 				//alert("Ué..");
-			}); 
+			});
 		});
 	</script>
 </head>
@@ -38,32 +38,32 @@
 		</a>
 		<a id="sair" href="logout.php">SAIR</a>
 	</div>
-	
+
 	<div class="topo_imagem">
-		<div class="sobre_topo">			
+		<div class="sobre_topo">
 			<div class="perfil_imagem"> </div>
 		</div>
 	</div>
-	
+
 	<div class="title">
 		<div id="header_space1">
 			<h1>Fulaninho</h1>
 			<div id="header_detalhe">
-			
+
 			</div>
 		</div>
 	</div>
 	<div class="main">
-		<div id="grad">		
+		<div id="grad">
 			<div id="header">
 				<div id="header_space2">
-					<h2>Pessoa Fulano de Pitanguinha</h2>
+					<h2>Estudante/Professor/Usuário em Geral</h2>
 					<p class="header_space2">Estudante Secundarista</p>
 					<p class="header_space2"><i>by Break</i></p>
-				</div>				
+				</div>
 			</div>
-		</div>	
-		<div class="back_main">		
+		</div>
+		<div class="back_main">
 			<div id="content">
 				<div id="sessao">
 					<div id="opc">
@@ -71,7 +71,7 @@
 					</div>
 				</div>
 				<div id="sessao">
-					<h3>Dados pessoais</h3>					
+					<h3>Dados pessoais</h3>
 					<ul class="list">
 						<li name="dataNasc">Data de Nasc.: 24/02/99</li>
 					</ul/>
@@ -83,13 +83,13 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 	<div class="back_rodape">
 		<div id="rodape">
 			<h3> Este é um rodapé </h3>
-			
+
 		</div>
 	</div>
 </body>

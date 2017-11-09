@@ -1,5 +1,5 @@
 <?php
-	/* login.php */
+	/* Notebook.php */
 	session_start();
 	if(!$_SESSION['autenticado']){
 		/* Caso não, será redirecionando */
@@ -19,7 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="css/feed.css">
 	<script type="text/javascript" src="js/feed.js"></script>
 	<link rel="icon" href="https://lh3.googleusercontent.com/-iVcMZ5Oeclc/WXdX3bE0tWI/AAAAAAAAZFM/ZVPSzODFT8ArUjSyc_akglrvfZO57aS9gCL0BGAs/s530-p-rw/icon_break.png" size="32x32">
-	<title>	Break | Feed</title>
+	<title>	Break | Notebook</title>
 </head>
 <body onload="loading()">
 	<div class="top">
@@ -32,7 +32,7 @@
 	<div class="main">
 		<div id="tabs">
 			<a href="perfil.php" id="tab">PERFIL</a>
-			<a href="notebook.php" id="tab" title="Seu caderno"> <img id="icon" src="img/notes.png" alt=""> </a>			
+			<a href="notebook.php" id="tab" title="Seu caderno"> <img id="icon" src="img/notes.png" alt=""> </a>
 			<a href="" id="tab" title="Buscar"> <img id="icon" src="img/seach.png" alt=""> </a>
 
 			<div id="tab" style="border-radius: 20px 0px 0px 0px;">
@@ -48,7 +48,7 @@
 		<div id="grad">
 			<div id="header">
 				<div id="header_space2">
-					<h2><strong>Header 2 </strong>| Um subtítulo para este exemplo</h2>
+					<h2><strong>Header 2 </strong>| Este é seu caderno!</h2>
 					<p class="header_space2">Postado em: <time>23 de julho de 2017</time></p>
 					<p class="header_space2"><i>by Albuquerque</i></p>
 				</div>
@@ -57,19 +57,15 @@
 		<div class="back_main">
 			<div id="content">
 				<div id="text_content">
-					<p> Limit.
-					Limit of the city, of patience, of the rope. Wake up! You'll do something about life.
-					In Aurelio it is what someone represents to stimulate, to love life. I do not have.
-					Maybe I can buy it one day. When it's sunny it's always cooler. The different is the same.
-					I think Schopenhauer makes a lot of sense and Baudelaire is completely crazy. Everything ends.
-					The sooner the better. I do not like scars...</p>
+					<p> Aqui você pode salvar sua perguntas/notas e pode separá-las por matérias.<p/>
+					<p>Além de ser um espaço totalmente privado ;)</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="back_rodape">
 		<div id="rodape">
-			<h3> Este é um rodapé </h3>
+			<h3>  Isso é tudo, pessoal ;) </h3>
 
 		</div>
 	</div>
