@@ -31,7 +31,7 @@
 	
 	<div class="main">
 		<div id="tabs">
-			<a href="" id="tab">PERFIL</a>
+			<a href="perfil.php" id="tab">PERFIL</a>
 			<a href="" id="tab" title="Seu caderno"> <img id="icon" src="img/notes.png" alt=""> </a>			
 			<a href="" id="tab" title="Buscar"> <img id="icon" src="img/seach.png" alt=""> </a>
 			

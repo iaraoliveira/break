@@ -18,9 +18,9 @@
 </head>
 <body>
 	<div class="header-left">
-			<img src="img/break-logo.png" alt="break-logo" id="header-logo">
-			<h2 id="title-header">Break</h2>
-		</div>
+		<img src="img/break-logo.png" alt="break-logo" id="header-logo">
+		<h2 id="title-header">Break</h2>
+	</div>
 	<div class="main">
 		
 		<div id="tabs">

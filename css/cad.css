@@ -11,24 +11,6 @@ body {
 	font-family: 'Montserrat', sans-serif;	
 }
 
-#leadType{
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 9px #efefef;
-    margin: 10px 0px 0px 0px;
-    padding: 3px 10px;
-    min-width: 300px;
-	min-height: 40px;
-	background-color: #fff;
-	font-family:'Montserrat', sans-serif;
-	font-weight:400;
-	color: #0e0e0e;
-	font-size: 10pt;
-	
-}
-
-
 .box-that{
 	position: absolute;
 	right: 0;
@@ -76,36 +58,6 @@ input {
 	font-weight: 400;
 	color: #0e0e0e;
 	font-size: 11pt;
-	
-}
-
-.radio {
-	min-width: 3px; min-height: 3px; padding: 1px; border-radius: none;
-	box-shadow: none;
-}
-
-::-webkit-datetime-edit-text { 
-	color: #adadad; 
-	
-}
-
-::-webkit-datetime-edit-year-field { 
-	color: #adadad; 
-	
-}
-
-::-webkit-datetime-edit-month-field { 
-	color: #adadad; 
-	
-}
-
-::-webkit-datetime-edit-day-field { 
-	color: #adadad; 
-	
-}
-
-#termos {
-	font-size: 12pt;
 	
 }
 
