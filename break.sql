@@ -80,6 +80,7 @@ CREATE TABLE IF NOT EXISTS turma (
 CREATE TABLE IF NOT EXISTS usuario (
   idusuario INT PRIMARY KEY AUTO_INCREMENT,
   nome_user varchar(45) NOT NULL,
+  sobrenome_user VARCHAR(45) NOT NULL,
   email varchar(45) DEFAULT NULL,
   login varchar(45) DEFAULT NULL,
   senha varchar(45) DEFAULT NULL,
@@ -112,8 +113,8 @@ INSERT INTO `tipo_user` (`idtipo_user`, `tipo_nome`) VALUES
 (5, 'Admin');
 
 
-INSERT INTO `usuario` (`idusuario`, `nome_user`, `email`, `login`, `senha`, `sexo`, `dataNasc`, `escolaridade`, `fk_tipo_user`) VALUES
-(1, 'Vinicius', 'vinicius.jaa99@gmail.com', 'vjunkes', 'fad418a545e780eee46584ff7794210f6c92113c', 'M', '1999-04-27', 'Cursando Ensino Médio', 5),
-(2, 'Iara', 'iara99oliveira@gmail.com', 'little_universe', '4ab1108ce6284ad7e517314bb7290c48a3a97ef9', 'F', '1999-02-24', 'Cursando Ensino Médio', 5),
-(3, 'Vitória ', 'vickdmeskelsen@gmail.com', 'vickeskelsen', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'F', '1999-08-18', 'Cursando Ensino Médio', 5),
-(4, 'Luiz', 'withtahatashi@gmail.com', 'luizu_senpai', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'M', '1999-09-07', NULL, 4);
+INSERT INTO `usuario` (`idusuario`, `nome_user`, sobrenome_user, `email`, `login`, `senha`, `sexo`, `dataNasc`, `escolaridade`, `fk_tipo_user`) VALUES
+(1, 'Vinicius', 'Almeida', 'vinicius.jaa99@gmail.com', 'vjunkes', 'fad418a545e780eee46584ff7794210f6c92113c', 'M', '1999-04-27', 'Cursando Ensino Médio', 5),
+(2, 'Iara', 'Oliveira', 'iara99oliveira@gmail.com', 'little_universe', '4ab1108ce6284ad7e517314bb7290c48a3a97ef9', 'F', '1999-02-24', 'Cursando Ensino Médio', 5),
+(3, 'Vitória', 'Eskelsen', 'vickdmeskelsen@gmail.com', 'vickeskelsen', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'F', '1999-08-18', 'Cursando Ensino Médio', 5),
+(4, 'Luiz', 'Borges', 'withtahatashi@gmail.com', 'luizu_senpai', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'M', '1999-09-07', NULL, 4);

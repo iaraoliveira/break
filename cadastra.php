@@ -1,5 +1,5 @@
 <?php
-	/* login.php */
+	/* cadastra.php */
 	session_start();
 ?>
 <!DOCTYPE HTML>
@@ -59,7 +59,7 @@
 				<input type="password" id="senha_input" title="Senha" placeholder="Digite sua power senha aqui" required name="senha_input"/>
 				<br/>
 
-				<div id=radio-genero>
+				<div id="radio-genero">
 					<label for="genero_input">Gênero</label>
 					<input type="radio" id="genero_m_input" name="genero_input" value="masc"> Masculino
 	  			<input type="radio" id="genero_f_input"name="genero_input" value="fem"> Feminino
