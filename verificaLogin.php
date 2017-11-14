@@ -19,6 +19,7 @@
 		$_SESSION['autenticado'] = 1;
 		$_SESSION['nm_usuario'] = $resultado['nome_user'];
 		$_SESSION['tp_usuario'] = $resultado['fk_tipo_user'];
+		$_SESSION['ftcover'] = $resultado['ftcover'];
 		$banco->CloseConnection();
 		header("Location: index.php");
 	}else{

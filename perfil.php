@@ -1,20 +1,12 @@
 <?php
-	/* index.php */
-	/* include 'header.php';*/
-
+	/* perfil.php */
+	require 'header.php';
+	/*$codigo = $_GET['idusuario'];
+	$banco->bind("cod", $codigo);
+	
+	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-	<meta name="description" content="Página principal">
-	<meta name="keywords" content="Break">
-	<meta name="author" content="Iara; Vitória; Luiz e; Vinícius J">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" href="https://lh3.googleusercontent.com/-iVcMZ5Oeclc/WXdX3bE0tWI/AAAAAAAAZFM/ZVPSzODFT8ArUjSyc_akglrvfZO57aS9gCL0BGAs/s530-p-rw/icon_break.png" size="32x32">
 	<title>Break | Perfil</title>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -47,12 +39,13 @@
 
 	<div class="title">
 		<div id="header_space1">
-			<h1>Fulaninho</h1>
+			<h1><?=$_SESSION['nm_usuario'];?></h1>
 			<div id="header_detalhe">
 
 			</div>
 		</div>
 	</div>
+	
 	<div class="main">
 		<div id="grad">
 			<div id="header">
