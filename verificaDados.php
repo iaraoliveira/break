@@ -11,13 +11,14 @@ if($_POST){
   $banco->bind('nome',$_POST['nome_user']);
   $banco->bind('sobrenome',$_POST['sobrenome_user']);
   $banco->bind('email',$_POST['email_user']);
+  $banco->bind('login',$_POST['login']);
   $banco->bind('senha',$_POST['senha']);
   $banco->bind('genero',$_POST['sexo']);
   $banco->bind('dataNasc',$_POST['dataNasc']);
   $banco->bind('escolaridade',$_POST['escolaridade']);
 
 $query = "INSERT INTO usuario (nome_user, sobrenome_user, email, login, senha, sexo, dataNasc, escolaridade)
-                    VALUES (:nome, :sobrenome, :email, :senha, :genero, :dataNasc, :escolaridade)";
+                    VALUES (:nome, :sobrenome, :email, :login, :senha, :genero, :dataNasc, :escolaridade)";
 
 $insercao = $banco->query($query);
 
