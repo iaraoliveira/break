@@ -1,0 +1,72 @@
+/* welcome.css */
+
+body {
+	margin: 0px;
+	background-color: #fef271;
+	
+	color: #444;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	margin: auto;
+	
+	font-weight: 800;
+	font-size: 72pt;
+	text-shadow: 7px 7px 0px rgba(0,0,0,0.2);
+	
+}
+
+h2{
+	font-size: 28pt;
+}
+
+.main {
+	margin: 60px auto auto auto;
+	
+}
+
+#mid_cont {
+	padding: 50px;
+	max-width: 400px;
+	margin: auto;
+	
+	font-size: 16pt;
+	text-align: center;
+	
+}
+
+#opt {
+	border-color: #444;
+	border-style: solid;
+	border-radius: 8px;
+	
+	
+	margin-right: 15px;
+	padding: 10px 25px;
+	
+	color: #444;
+	font-weight: 600;
+	text-decoration: none;
+	transition: box-shadow 0.5s;
+	transition: background-color 0.8s;
+	transition: color 0.8s;
+}
+
+#opt:hover {
+	box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+	color: #fef271;
+	background-color: #444;
+	cursor: arrow;
+}
+
+@media screen and (max-width: 551px) {
+	#opt {
+		position: relative;
+		top: 10px;
+	}
+	#mid_cont {
+		font-size: 90%;
+	}
+	
+}
