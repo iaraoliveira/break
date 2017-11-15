@@ -76,10 +76,10 @@
 
 				<label for="escolaridade">Escolaridade</label>
 				<select id="escolaridade" name="escolaridade">
-					<option value="fundamental1">Ensino Fundamental I</option>
-					<option value="fundamental2">Ensino Fundamental II</option>
-					<option value="medio">	     Ensino Médio</option>
-					<option value="superior">	 Ensino Superior</option>
+					<option id="opt" value="fundamental1">Ensino Fundamental I</option>
+					<option id="opt" value="fundamental2">Ensino Fundamental II</option>
+					<option id="opt" value="medio">	     Ensino Médio</option>
+					<option id="opt" value="superior">	 Ensino Superior</option>
 				</select>
 
 				<div id="down-inputs">

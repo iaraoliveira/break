@@ -31,7 +31,11 @@
 		$_SESSION['cadastro'] = $insercao;
 		if($insercao){
 			$_SESSION['autenticado'] = 1;
-			header("Location: index.php");
+			$_SESSION['nm_usuario'] = $resultado['nome_user'];
+			$_SESSION['tp_usuario'] = $resultado['fk_tipo_user'];
+			$_SESSION['ftcover'] = $resultado['ftcover'];
+			$banco->CloseConnection();
+			header("Location: boas-vindas.php");
 		}else{
 			echo "<script>alert('A unknown bug has appeared.. :c');</script>";
 		}

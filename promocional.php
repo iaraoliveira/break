@@ -35,7 +35,7 @@
 			</div>
 		</div>
 		<div id="second_part">
-		
+			
 		</div>
 	</div>
 </body>
