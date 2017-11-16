@@ -1,9 +1,9 @@
 <?php
 	/* perfil.php */
 	require 'header.php';
+	require 'dados-perfil.php';
+
 	/*$codigo = $_GET['idusuario'];
-	$banco->bind("cod", $codigo);
-	
 	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -39,19 +39,19 @@
 
 	<div class="title">
 		<div id="header_space1">
-			<h1><?=$_SESSION['nm_usuario'];?></h1>
+			<h1><?=$_SESSION['nm_usuario'];$_SESSION['sbm_usuario'];?></h1>
 			<div id="header_detalhe">
 
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="main">
 		<div id="grad">
 			<div id="header">
 				<div id="header_space2">
-					<h2>Estudante/Professor/Usuário em Geral</h2>
-					<p class="header_space2">Estudante Secundarista</p>
+					<h2><?php echo $_SESSION['nm_usuario'] . " " . $_SESSION['sbm_usuario'];?></h2>
+					<p class="header_space2"><?=$esc;?></p>
 					<p class="header_space2"><i>by Break</i></p>
 				</div>
 			</div>
@@ -60,19 +60,19 @@
 			<div id="content">
 				<div id="sessao">
 					<div id="opc">
-						<img href="perfil/galera.php" name="caderno" alt="CAD"/>
+						<img href="perfil/galera.php" name="caderno" alt="Dados Cadastrais"/>
 					</div>
 				</div>
 				<div id="sessao">
 					<h3>Dados pessoais</h3>
 					<ul class="list">
-						<li name="dataNasc">Data de Nasc.: 24/02/99</li>
+						<li name="dataNasc">Data de Nasc.: <?=$_SESSION['dt_nasc'];?></li>
 					</ul/>
 				</div>
 				<div id="sessao">
 					<h3>Últimos posts</h3>
 					<div id="text_content">
-						<p> Lorem ipsum dolor sit amet,</p>
+						<p> </p>
 					</div>
 				</div>
 			</div>

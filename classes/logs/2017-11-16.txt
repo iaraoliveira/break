@@ -1,0 +1,12 @@
+Time : 19:12:15
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cd_usuario' in 'where clause'
+Raw SQL : select u.* from usuario u
+								where
+								cd_usuario = :cod
+
+Time : 19:11:44
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'break.cidades' doesn't exist
+Raw SQL : select u.*, c.cd_estado from usuario u,
+								cidades c
+								where
+								cd_usuario = :cod

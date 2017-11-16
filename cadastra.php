@@ -1,6 +1,6 @@
 <?php
 	/* cadastra.php */
-	
+
 	require 'verificaDados.php';
 ?>
 <!DOCTYPE HTML>
@@ -40,7 +40,7 @@
 									FORCE
 			</h1>
 			<form name="cadastro" action="" method="post" onsubmit="">
-			
+
 				<label for="nome_user">Primeiro Nome</label>
 				<input type="text" id="nome_user" title="Primeiro nome"
 					   placeholder="ex.: Luke" name="nome_user"
@@ -78,8 +78,8 @@
 				<select id="escolaridade" name="escolaridade">
 					<option id="opt" value="fundamental1">Ensino Fundamental I</option>
 					<option id="opt" value="fundamental2">Ensino Fundamental II</option>
-					<option id="opt" value="medio">	     Ensino Médio</option>
-					<option id="opt" value="superior">	 Ensino Superior</option>
+					<option id="opt" value="medio">	      Ensino Médio</option>
+					<option id="opt" value="superior">	  Ensino Superior</option>
 				</select>
 
 				<div id="down-inputs">
@@ -87,7 +87,7 @@
 					<input type="submit" id="button-entry" title="wanna be a jedi, now." value="CADASTRAR"/>
 				</div>
 			</form>
-			
+
 		</div>
 		<div id="rodape">
 			<a href="promocional.php" title="Ma que cartso que é breakuro?" id="saiba_mais">O que é break?</a>
