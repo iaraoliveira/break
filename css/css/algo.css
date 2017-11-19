@@ -1,0 +1,44 @@
+/* algo.css */
+body {
+  margin: 0px;
+    /*background: linear-gradient(180deg, rgba(251,0,0,0), rgba(251,243,215, 1));*/
+    background-color: #009bdb;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+  color: #0e0e0e;
+  text-shadow: 2px 2px 6px #fafafa;
+}
+
+.titulo {
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+  font-weight: 400;
+}
+
+
+.divisor {
+  background-color: #fafafa;
+  margin: auto;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 2px 2px 10px rgba(0,0,0, 0.4);
+  transition: box-shadow 1s;
+  transition: max-width 0.4s;
+}
+
+.divisor:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 40px rgba(0,0,0, 0.6);
+  max-width: 700px;
+}
+
+#subtitulo {
+  margin: auto;
+  font-size: 80pt;
+  text-align: center;
+}

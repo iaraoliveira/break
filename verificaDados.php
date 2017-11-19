@@ -1,13 +1,13 @@
 <?php
 	/* verificaDados.php */
 	session_start();
-	
+
 	/* arquivo de configuração */
 	require 'config-painel.php';
-	
+
 	/* Conexão com BD */
 	require 'classes/Db.class.php';
-	
+
 	$banco = new DB();
 
 	if($_POST){
@@ -31,10 +31,11 @@
 		$_SESSION['cadastro'] = $insercao;
 		if($insercao){
 			$_SESSION['autenticado'] = 1;
-			$_SESSION['nm_usuario'] = $resultado['nome_user'];
-			$_SESSION['tp_usuario'] = $resultado['fk_tipo_user'];
-			$_SESSION['ftcover'] = $resultado['ftcover'];
+			$_SESSION['nm_usuario'] = $insercao['nome_user'];
+			$_SESSION['tp_usuario'] = $insercao['fk_tipo_user'];
+			$_SESSION['ftcover'] = $insercao['ftcover'];
 			$banco->CloseConnection();
+			require 'verificaLogin.php';
 			header("Location: boas-vindas.php");
 		}else{
 			echo "<script>alert('A unknown bug has appeared.. :c');</script>";
