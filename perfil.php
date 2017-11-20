@@ -68,6 +68,8 @@
 					<ul class="list">
 						<li name="dataNasc">Data de Nasc.: <?=$_SESSION['dt_nasc'];?></li>
 						<li name="escolaridade">Escolaridade: <?= $_SESSION['escolaridade'] ?></li>
+						<li name="email">Email: <?= $_SESSION['email'] ?></li>
+						<li name="sexo">Sexo: <?= $_SESSION['sexo'] ?></li>
 						<li name="instituicao">Instituição: <?= $_SESSION['instituicao'] ?></li>
 					</ul/>
 				</div>

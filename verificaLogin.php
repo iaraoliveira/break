@@ -22,6 +22,9 @@
 		$_SESSION['tp_usuario'] = $resultado['fk_tipo_user'];
 		$_SESSION['ftcover'] = $resultado['ftcover'];
 		$_SESSION['escolaridade'] = $resultado['escolaridade'];
+		$_SESSION['email'] = $resultado['email'];
+		$_SESSION['sexo'] = $resultado['sexo'];
+		$_SESSION['instituicao'] = $resultado['instituicao'];
 		$_SESSION['dt_nasc'] = $resultado['dataNasc'];
 
 		$banco->CloseConnection();

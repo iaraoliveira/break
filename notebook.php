@@ -1,33 +1,14 @@
 <?php
 	/* Notebook.php */
-	session_start();
-	if(!$_SESSION['autenticado']){
-		/* Caso não, será redirecionando */
-		header("Location: promocional.php");
-	}
+	include	'header.php';
 ?>
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Feed de postagens">
-	<meta name="keywords" content="Break">
-	<meta name="author" content="Iara; Vitória; Luiz e; Vinícius J">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/feed.css">
-	<script type="text/javascript" src="js/feed.js"></script>
-	<link rel="icon" href="https://lh3.googleusercontent.com/-iVcMZ5Oeclc/WXdX3bE0tWI/AAAAAAAAZFM/ZVPSzODFT8ArUjSyc_akglrvfZO57aS9gCL0BGAs/s530-p-rw/icon_break.png" size="32x32">
-	<title>	Break | Notebook</title>
+<link rel="stylesheet" type="text/css" href="css/feed.css">
+<title>Break | Perfil</title>
 </head>
 <body onload="loading()">
-	<div class="top">
-		<a id="sair" href="logout.php">SAIR</a>
-	</div>
-	<div class="topo_imagem">
-		<img src="img/break_logo_white_shadow.png" alt="a"  class="topo_imagem">
-	</div>
+	<?php
+		include 'essencials/top.php';
+	?>
 
 	<div class="main">
 		<div id="tabs">
