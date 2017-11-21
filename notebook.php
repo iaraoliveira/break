@@ -3,6 +3,7 @@
 	include	'header.php';
 ?>
 <link rel="stylesheet" type="text/css" href="css/feed.css">
+	<script type="text/javascript" src="js/feed.js"></script>
 <title>Break | Perfil</title>
 </head>
 <body onload="loading()">
