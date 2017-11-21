@@ -1,7 +1,9 @@
 <?php
 	/* index.php */
 	require 'header.php';
+	include("dao-disciplina.php");
 
+	$disciplinas = listaDisciplinas($conexao);
 ?>
 	<link rel="stylesheet" type="text/css" href="css/feed.css">
 
@@ -27,10 +29,15 @@
 		<div id="grad">
 			<div id="header_main">
 				<div id="header_space2">
-					<form id="postar" action="#" method="post">
+					<form id="postar" action="adiciona-pergunta.php" method="post">
 						<div class="post_area">
-							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p"></textarea>
+							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p" name="pergunta"></textarea>
 							<div id="post_btns">
+								<select class="" name="id_disciplina">
+									<?php foreach($disciplinas as $disciplina) : ?>
+					        	<option value="<?=$disciplina['iddisciplina']?>"><?=$disciplina['disc_nome']?></option>
+					        <?php endforeach ?>
+								</select>
 								<button type="button" id="btn_opt" onclick="show_tools()">
 										<img id="btn_opt_img" src="img/sum_icon.png" alt="+-*:" title="Usar símbolos Matemáticos">
 								</button>

@@ -17,6 +17,7 @@
 	if($resultado){
 		/* autorizado */
 		$_SESSION['autenticado'] = 1;
+		$_SESSION['id_usuario'] = $resultado['idusuario'];
 		$_SESSION['nm_usuario'] = $resultado['nome_user'];
 		$_SESSION['sbm_usuario'] = $resultado['sobrenome_user'];
 		$_SESSION['tp_usuario'] = $resultado['fk_tipo_user'];
