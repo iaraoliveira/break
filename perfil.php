@@ -51,7 +51,7 @@
 			<div id="header">
 				<div id="header_space2">
 					<h2><?php echo $_SESSION['nm_usuario'] . " " . $_SESSION['sbm_usuario'];?></h2>
-					<p class="header_space2"><?=$esc;?></p>
+
 					<p class="header_space2"><i>by Break</i></p>
 				</div>
 			</div>

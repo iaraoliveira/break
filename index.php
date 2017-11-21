@@ -49,7 +49,7 @@
 			</div>
 		</div>
 		<div class="back_main">
-		<?php include 'feedFlow.php';?>
+
 			<div id="header">
 				<h2><strong>Header 2 </strong>| Um subtítulo para este exemplo</h2>
 					<p class="header_space2">Postado em: <time>23 de julho de 2017</time></p>

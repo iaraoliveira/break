@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.1.14
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 21-Nov-2017 às 18:22
--- Versão do servidor: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: 21-Nov-2017 às 20:18
+-- Versão do servidor: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `break`
@@ -26,10 +26,19 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `anotacao`
 --
 
-CREATE TABLE `anotacao` (
-  `idanotacao` int(11) NOT NULL,
-  `anota_descricao` varchar(45) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `anotacao` (
+  `idanotacao` int(11) NOT NULL AUTO_INCREMENT,
+  `anota_descricao` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idanotacao`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `anotacao`
+--
+
+INSERT INTO `anotacao` (`idanotacao`, `anota_descricao`) VALUES
+(1, 'Anotação teste 01'),
+(2, 'Anotação teste 02');
 
 -- --------------------------------------------------------
 
@@ -37,12 +46,24 @@ CREATE TABLE `anotacao` (
 -- Estrutura da tabela `caderno`
 --
 
-CREATE TABLE `caderno` (
-  `idcaderno` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `caderno` (
+  `idcaderno` int(11) NOT NULL AUTO_INCREMENT,
   `fk_pergunta` int(11) NOT NULL,
   `fk_anota` int(11) NOT NULL,
-  `fk_usuario` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `fk_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`idcaderno`),
+  KEY `fk_anota` (`fk_anota`),
+  KEY `fk_pergunta` (`fk_pergunta`),
+  KEY `fk_usuario` (`fk_usuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `caderno`
+--
+
+INSERT INTO `caderno` (`idcaderno`, `fk_pergunta`, `fk_anota`, `fk_usuario`) VALUES
+(1, 1, 1, 1),
+(2, 2, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -50,12 +71,22 @@ CREATE TABLE `caderno` (
 -- Estrutura da tabela `comentario`
 --
 
-CREATE TABLE `comentario` (
-  `idcomentario` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `comentario` (
+  `idcomentario` int(11) NOT NULL AUTO_INCREMENT,
   `cmt_descricao` text,
   `cmt_registro` datetime DEFAULT NULL,
-  `fk_usuario` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `fk_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`idcomentario`),
+  KEY `fk_usuario` (`fk_usuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `comentario`
+--
+
+INSERT INTO `comentario` (`idcomentario`, `cmt_descricao`, `cmt_registro`, `fk_usuario`) VALUES
+(1, 'Comentario teste 01', '2017-11-21 00:00:00', 1),
+(2, 'Comentario teste 02', '2017-11-02 00:00:00', 2);
 
 -- --------------------------------------------------------
 
@@ -63,11 +94,20 @@ CREATE TABLE `comentario` (
 -- Estrutura da tabela `disciplina`
 --
 
-CREATE TABLE `disciplina` (
-  `iddisciplina` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `disciplina` (
+  `iddisciplina` int(11) NOT NULL AUTO_INCREMENT,
   `disc_nome` varchar(45) NOT NULL,
-  `disc_color` varchar(6) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `disc_color` varchar(6) DEFAULT NULL,
+  PRIMARY KEY (`iddisciplina`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `disciplina`
+--
+
+INSERT INTO `disciplina` (`iddisciplina`, `disc_nome`, `disc_color`) VALUES
+(1, 'português', NULL),
+(2, 'matematica', NULL);
 
 -- --------------------------------------------------------
 
@@ -75,8 +115,8 @@ CREATE TABLE `disciplina` (
 -- Estrutura da tabela `pergunta`
 --
 
-CREATE TABLE `pergunta` (
-  `idpergunta` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `pergunta` (
+  `idpergunta` int(11) NOT NULL AUTO_INCREMENT,
   `prg_titulo` varchar(50) NOT NULL,
   `prg_descricao` text,
   `prg_status` tinyint(4) DEFAULT NULL,
@@ -84,8 +124,21 @@ CREATE TABLE `pergunta` (
   `fk_disciplina` int(11) NOT NULL,
   `fk_comentario` int(11) NOT NULL,
   `fk_usuario` int(11) NOT NULL,
-  `fk_resposta` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `fk_resposta` int(11) NOT NULL,
+  PRIMARY KEY (`idpergunta`),
+  KEY `fk_comentario` (`fk_comentario`),
+  KEY `fk_disciplina` (`fk_disciplina`),
+  KEY `fk_resposta` (`fk_resposta`),
+  KEY `fk_usuario` (`fk_usuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `pergunta`
+--
+
+INSERT INTO `pergunta` (`idpergunta`, `prg_titulo`, `prg_descricao`, `prg_status`, `prg_registro`, `fk_disciplina`, `fk_comentario`, `fk_usuario`, `fk_resposta`) VALUES
+(1, 'Pergunta 01', 'Com quantos paus se faz uma canoa?', 0, '2017-11-21 00:00:00', 0, 0, 0, 0),
+(2, 'Pergunta 02', 'Por que a galinha atravessou a rua?', NULL, '0000-00-00 00:00:00', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -93,14 +146,24 @@ CREATE TABLE `pergunta` (
 -- Estrutura da tabela `resposta`
 --
 
-CREATE TABLE `resposta` (
-  `idresposta` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `resposta` (
+  `idresposta` int(11) NOT NULL AUTO_INCREMENT,
   `rsp_descricao` text NOT NULL,
   `rsp_registro` datetime NOT NULL,
   `rsp_status` varchar(45) DEFAULT NULL,
   `rsp_classif` int(5) DEFAULT NULL,
-  `fk_usuario` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `fk_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`idresposta`),
+  KEY `fk_usuario` (`fk_usuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `resposta`
+--
+
+INSERT INTO `resposta` (`idresposta`, `rsp_descricao`, `rsp_registro`, `rsp_status`, `rsp_classif`, `fk_usuario`) VALUES
+(1, 'Exemplo Resposta 01', '2018-01-17 00:00:00', '1', 1, 1),
+(2, 'Exemplo Resposta 02', '2018-04-07 00:00:00', '2', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -108,10 +171,11 @@ CREATE TABLE `resposta` (
 -- Estrutura da tabela `tipo_user`
 --
 
-CREATE TABLE `tipo_user` (
-  `idtipo_user` int(11) NOT NULL,
-  `tipo_nome` varchar(45) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `tipo_user` (
+  `idtipo_user` int(11) NOT NULL AUTO_INCREMENT,
+  `tipo_nome` varchar(45) NOT NULL,
+  PRIMARY KEY (`idtipo_user`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Extraindo dados da tabela `tipo_user`
@@ -130,11 +194,20 @@ INSERT INTO `tipo_user` (`idtipo_user`, `tipo_nome`) VALUES
 -- Estrutura da tabela `turma`
 --
 
-CREATE TABLE `turma` (
-  `idturma` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `turma` (
+  `idturma` int(11) NOT NULL AUTO_INCREMENT,
   `trm_nome` varchar(45) NOT NULL,
-  `trm_qtd` int(50) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `trm_qtd` int(50) DEFAULT NULL,
+  PRIMARY KEY (`idturma`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `turma`
+--
+
+INSERT INTO `turma` (`idturma`, `trm_nome`, `trm_qtd`) VALUES
+(1, 'INFEM 401v', NULL),
+(2, 'INFEM 402v', NULL);
 
 -- --------------------------------------------------------
 
@@ -142,8 +215,8 @@ CREATE TABLE `turma` (
 -- Estrutura da tabela `usuario`
 --
 
-CREATE TABLE `usuario` (
-  `idusuario` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `idusuario` int(11) NOT NULL AUTO_INCREMENT,
   `nome_user` varchar(45) NOT NULL,
   `sobrenome_user` varchar(45) NOT NULL,
   `email` varchar(45) DEFAULT NULL,
@@ -153,8 +226,10 @@ CREATE TABLE `usuario` (
   `dataNasc` date DEFAULT NULL,
   `escolaridade` text,
   `instituicao` varchar(200) DEFAULT NULL,
-  `fk_tipo_user` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `fk_tipo_user` int(11) NOT NULL,
+  PRIMARY KEY (`idusuario`),
+  KEY `fk_tipo_user` (`fk_tipo_user`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -173,135 +248,13 @@ INSERT INTO `usuario` (`idusuario`, `nome_user`, `sobrenome_user`, `email`, `log
 -- Estrutura da tabela `usuario_turma`
 --
 
-CREATE TABLE `usuario_turma` (
+CREATE TABLE IF NOT EXISTS `usuario_turma` (
   `usuario_idusuario` int(11) NOT NULL,
-  `turma_idturma` int(11) NOT NULL
+  `turma_idturma` int(11) NOT NULL,
+  PRIMARY KEY (`usuario_idusuario`,`turma_idturma`),
+  KEY `turma_idturma` (`turma_idturma`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `anotacao`
---
-ALTER TABLE `anotacao`
-  ADD PRIMARY KEY (`idanotacao`);
-
---
--- Indexes for table `caderno`
---
-ALTER TABLE `caderno`
-  ADD PRIMARY KEY (`idcaderno`),
-  ADD KEY `fk_anota` (`fk_anota`),
-  ADD KEY `fk_pergunta` (`fk_pergunta`),
-  ADD KEY `fk_usuario` (`fk_usuario`);
-
---
--- Indexes for table `comentario`
---
-ALTER TABLE `comentario`
-  ADD PRIMARY KEY (`idcomentario`),
-  ADD KEY `fk_usuario` (`fk_usuario`);
-
---
--- Indexes for table `disciplina`
---
-ALTER TABLE `disciplina`
-  ADD PRIMARY KEY (`iddisciplina`);
-
---
--- Indexes for table `pergunta`
---
-ALTER TABLE `pergunta`
-  ADD PRIMARY KEY (`idpergunta`),
-  ADD KEY `fk_comentario` (`fk_comentario`),
-  ADD KEY `fk_disciplina` (`fk_disciplina`),
-  ADD KEY `fk_resposta` (`fk_resposta`),
-  ADD KEY `fk_usuario` (`fk_usuario`);
-
---
--- Indexes for table `resposta`
---
-ALTER TABLE `resposta`
-  ADD PRIMARY KEY (`idresposta`),
-  ADD KEY `fk_usuario` (`fk_usuario`);
-
---
--- Indexes for table `tipo_user`
---
-ALTER TABLE `tipo_user`
-  ADD PRIMARY KEY (`idtipo_user`);
-
---
--- Indexes for table `turma`
---
-ALTER TABLE `turma`
-  ADD PRIMARY KEY (`idturma`);
-
---
--- Indexes for table `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`idusuario`),
-  ADD KEY `fk_tipo_user` (`fk_tipo_user`);
-
---
--- Indexes for table `usuario_turma`
---
-ALTER TABLE `usuario_turma`
-  ADD PRIMARY KEY (`usuario_idusuario`,`turma_idturma`),
-  ADD KEY `turma_idturma` (`turma_idturma`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `anotacao`
---
-ALTER TABLE `anotacao`
-  MODIFY `idanotacao` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `caderno`
---
-ALTER TABLE `caderno`
-  MODIFY `idcaderno` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `comentario`
---
-ALTER TABLE `comentario`
-  MODIFY `idcomentario` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `disciplina`
---
-ALTER TABLE `disciplina`
-  MODIFY `iddisciplina` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `pergunta`
---
-ALTER TABLE `pergunta`
-  MODIFY `idpergunta` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `resposta`
---
-ALTER TABLE `resposta`
-  MODIFY `idresposta` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tipo_user`
---
-ALTER TABLE `tipo_user`
-  MODIFY `idtipo_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `turma`
---
-ALTER TABLE `turma`
-  MODIFY `idturma` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
