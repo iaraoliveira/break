@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 21-Nov-2017 às 23:18
+-- Generation Time: 22-Nov-2017 às 22:27
 -- Versão do servidor: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -105,7 +105,8 @@ INSERT INTO `disciplina` (`iddisciplina`, `disc_nome`, `disc_color`) VALUES
 (5, 'História', NULL),
 (6, 'Filosofia', NULL),
 (7, 'Sociologia', NULL),
-(8, 'Inglês', NULL);
+(8, 'Inglês', NULL),
+(9, 'Espanhol', NULL);
 
 -- --------------------------------------------------------
 
@@ -115,13 +116,13 @@ INSERT INTO `disciplina` (`iddisciplina`, `disc_nome`, `disc_color`) VALUES
 
 CREATE TABLE `pergunta` (
   `idpergunta` int(11) NOT NULL,
-  `prg_titulo` varchar(50) DEFAULT NULL,
+  `prg_titulo` varchar(50) NOT NULL,
   `prg_descricao` text,
-  `prg_respondida` tinyint(1) DEFAULT NULL,
+  `prg_respondida` tinyint(1) NOT NULL DEFAULT '0',
   `prg_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `fk_disciplina` int(11) NOT NULL,
   `fk_comentario` int(11) DEFAULT NULL,
-  `fk_usuario` int(11) DEFAULT NULL,
+  `fk_usuario` int(11) NOT NULL,
   `fk_resposta` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -131,8 +132,8 @@ CREATE TABLE `pergunta` (
 
 INSERT INTO `pergunta` (`idpergunta`, `prg_titulo`, `prg_descricao`, `prg_respondida`, `prg_registro`, `fk_disciplina`, `fk_comentario`, `fk_usuario`, `fk_resposta`) VALUES
 (1, 'Pergunta 01', 'Com quantos paus se faz uma canoa?', 0, '2017-11-21 00:00:00', 0, 0, 0, 0),
-(3, NULL, 'oi?', NULL, '2017-11-21 20:23:41', 2, NULL, NULL, NULL),
-(8, NULL, 'Por que o id nÃ£o funciona?', NULL, '2017-11-21 21:05:19', 2, NULL, NULL, NULL);
+(11, 'Tales', '..de Mileto', 0, '2017-11-22 17:43:28', 6, NULL, 5, NULL),
+(12, 'teste', 'estÃ¡ funcionando??', 0, '2017-11-22 18:12:39', 3, NULL, 5, NULL);
 
 -- --------------------------------------------------------
 
@@ -339,12 +340,12 @@ ALTER TABLE `comentario`
 -- AUTO_INCREMENT for table `disciplina`
 --
 ALTER TABLE `disciplina`
-  MODIFY `iddisciplina` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `iddisciplina` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `pergunta`
 --
 ALTER TABLE `pergunta`
-  MODIFY `idpergunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idpergunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `resposta`
 --

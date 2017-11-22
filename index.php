@@ -31,6 +31,7 @@
 				<div id="header_space2">
 					<form id="postar" action="adiciona-pergunta.php" method="post">
 						<div class="post_area">
+							<textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título" name="title_perg"></textarea>
 							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p" name="pergunta"></textarea>
 							<div id="post_btns">
 								<select class="" name="id_disciplina">

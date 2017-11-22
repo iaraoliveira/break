@@ -2,8 +2,10 @@
 
 <?php
 
+$title_perg = $_POST['title_perg'];
 $pergunta = $_POST['pergunta'];
 $id_disciplina = $_POST['id_disciplina'];
+$id_usuario = $_SESSION['id_usuario'];
 
 
 require 'dao-pergunta.php';
@@ -11,7 +13,7 @@ require 'dao-pergunta.php';
 
 
  <?php
- if(inserePergunta($conexao, $pergunta, $id_disciplina)) {
+ if(inserePergunta($conexao, $title_perg, $pergunta, $id_disciplina, $id_usuario)) {
  ?>
  <p>pergunta adicionada com sucesso</p>
  <?php

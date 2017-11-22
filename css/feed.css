@@ -104,6 +104,20 @@ textarea {
 	z-index: 1;
 
 }
+
+#title_perg {
+	background-color: #fbf3d7;
+	box-shadow: none;
+
+	text-align: right;
+	font-size: 16pt;
+	font-weight: 700;
+	color: #0e0e0e;
+
+	padding-bottom: 2px;
+	top: 15px;
+}
+
 @media screen and (max-width: 400px) {
 	textarea {
 		min-width: 200px;
