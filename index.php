@@ -31,10 +31,11 @@
 				<div id="header_space2">
 					<form id="postar" action="adiciona-pergunta.php" method="post">
 						<div class="post_area">
-							<textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título" name="title_perg"></textarea>
-							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p" name="pergunta"></textarea>
+							<textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título" name="title_perg" required></textarea>
+							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p" name="pergunta" required></textarea>
 							<div id="post_btns">
-								<select class="" name="id_disciplina">
+								<select class="" name="id_disciplina" required>
+										<option value="">Disciplina</option>
 									<?php foreach($disciplinas as $disciplina) : ?>
 					        	<option value="<?=$disciplina['iddisciplina']?>"><?=$disciplina['disc_nome']?></option>
 					        <?php endforeach ?>
@@ -58,12 +59,8 @@
 		</div>
 		<div class="back_main">
 
-			<div id="header">
-				<h2><strong>Header 2 </strong>| Um subtítulo para este exemplo</h2>
-					<p class="header_space2">Postado em: <time>23 de julho de 2017</time></p>
-					<p class="header_space2"><i>by quem</i></p>
+			<?php	include("feed.php"); ?>
 
-			</div>
 			<div id="content">
 				<div id="text_content">
 					<p> \(a \ne 0\)</p>
