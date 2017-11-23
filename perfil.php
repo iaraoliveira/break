@@ -3,6 +3,7 @@
 	require 'header.php';
 	require 'dados-perfil.php';
 
+
 	/*$codigo = $_GET['idusuario'];
 	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
@@ -75,9 +76,15 @@
 				</div>
 				<div id="sessao">
 					<h3>Últimos posts</h3>
-					<div id="text_content">
-						<p> </p>
-					</div>
+					<?php
+					if (isset($_SESSION['alert'])){
+					?>
+					<p><bold><?=$_SESSION['alert'] ?></bold></p>
+					<?php
+					    unset($_SESSION['alert']);
+					}
+					?>
+					<?php require 'ultimos-posts.php'?>
 				</div>
 			</div>
 
