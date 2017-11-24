@@ -47,3 +47,15 @@ function removePergunta($conexao, $id)
     $query = "DELETE FROM pergunta WHERE idpergunta = {$id}";
     return mysqli_query($conexao, $query);
 }
+
+function buscaPergunta($conexao, $id)
+{
+    $query = "SELECT p.*, d.disc_nome, u.nome_user
+              FROM disciplina AS d
+              JOIN pergunta AS p ON p.fk_disciplina = d.iddisciplina
+              JOIN usuario AS u ON u.idusuario = p.fk_usuario
+              WHERE idpergunta = {$id}";
+    $resultado= mysqli_query($conexao, $query);
+    return mysqli_fetch_assoc($resultado);
+
+}
