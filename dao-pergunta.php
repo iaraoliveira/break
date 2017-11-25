@@ -1,12 +1,23 @@
 <?php
 
-function inserePergunta($conexao, $title_perg, $pergunta, $id_disciplina, $id_usuario){
+function inserePergunta($conexao, $title_perg, $pergunta, $disciplina_id, $id_usuario){
   if ($title_perg != "" && $id_disciplina != ""){
     $query = "insert into pergunta (prg_titulo, prg_descricao, fk_disciplina, fk_usuario)
-                            values ('{$title_perg}','{$pergunta}', {$id_disciplina}, {$id_usuario})";
+                            values ('{$title_perg}','{$pergunta}', {$disciplina_id}, {$id_usuario})";
     $resultadoDaInsercao = mysqli_query($conexao, $query);
     return $resultadoDaInsercao;
   }
+}
+
+function alteraPergunta($conexao, $id, $titulo, $descricao, $disciplina_id)
+{
+    $query = "UPDATE pergunta SET
+            prg_titulo = '{$titulo}',
+            prg_descricao = '{$descricao}',
+            fk_disciplina = {$disciplina_id}
+            WHERE idpergunta={$id}";
+    $resultado = mysqli_query($conexao, $query);
+    return $resultado;
 }
 
 function listaPergunta($conexao)

@@ -22,7 +22,7 @@
 	});
 	</script>
 
-	<title>Break | Feed</title>
+	<title>Break</title>
 
 </head>
 <body onload="loading();">

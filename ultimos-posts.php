@@ -17,7 +17,7 @@ $perguntas = listaUltimosPostsUsuario($conexao, $id);
         <p class="header_space2">Postado em: <time><?=$pergunta['prg_registro']?></time></p>
         <p class="header_space2"><i>by <?=$pergunta['nome_user']?></i></p>
 
-        <form action="altera-pergunta.php?id=<?=$pergunta['idpergunta']?>" method="post">
+        <form action="form-altera-pergunta.php" method="post">
           <input type="hidden" name="id" value="<?=$pergunta['idpergunta']?>" />
           <button>Alterar</button>
         </form>
