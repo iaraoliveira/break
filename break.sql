@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Nov-2017 às 22:27
+-- Generation Time: 25-Nov-2017 às 00:36
 -- Versão do servidor: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -28,16 +28,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `anotacao` (
   `idanotacao` int(11) NOT NULL,
-  `anota_descricao` varchar(45) DEFAULT NULL
+  `anota_descricao` varchar(45) DEFAULT NULL,
+  `anota_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `anotacao`
 --
 
-INSERT INTO `anotacao` (`idanotacao`, `anota_descricao`) VALUES
-(1, 'Anotação teste 01'),
-(2, 'Anotação teste 02');
+INSERT INTO `anotacao` (`idanotacao`, `anota_descricao`, `anota_registro`) VALUES
+(1, 'Anotação teste 01', '2017-11-24 20:22:06'),
+(2, 'Anotação teste 02', '2017-11-24 20:22:06');
 
 -- --------------------------------------------------------
 
@@ -69,7 +70,7 @@ INSERT INTO `caderno` (`idcaderno`, `fk_pergunta`, `fk_anota`, `fk_usuario`) VAL
 CREATE TABLE `comentario` (
   `idcomentario` int(11) NOT NULL,
   `cmt_descricao` text,
-  `cmt_registro` datetime DEFAULT NULL,
+  `cmt_registro` datetime DEFAULT CURRENT_TIMESTAMP,
   `fk_usuario` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -121,19 +122,20 @@ CREATE TABLE `pergunta` (
   `prg_respondida` tinyint(1) NOT NULL DEFAULT '0',
   `prg_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `fk_disciplina` int(11) NOT NULL,
-  `fk_comentario` int(11) DEFAULT NULL,
-  `fk_usuario` int(11) NOT NULL,
-  `fk_resposta` int(11) DEFAULT NULL
+  `fk_usuario` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `pergunta`
 --
 
-INSERT INTO `pergunta` (`idpergunta`, `prg_titulo`, `prg_descricao`, `prg_respondida`, `prg_registro`, `fk_disciplina`, `fk_comentario`, `fk_usuario`, `fk_resposta`) VALUES
-(1, 'Pergunta 01', 'Com quantos paus se faz uma canoa?', 0, '2017-11-21 00:00:00', 0, 0, 0, 0),
-(11, 'Tales', '..de Mileto', 0, '2017-11-22 17:43:28', 6, NULL, 5, NULL),
-(12, 'teste', 'estÃ¡ funcionando??', 0, '2017-11-22 18:12:39', 3, NULL, 5, NULL);
+INSERT INTO `pergunta` (`idpergunta`, `prg_titulo`, `prg_descricao`, `prg_respondida`, `prg_registro`, `fk_disciplina`, `fk_usuario`) VALUES
+(1, 'Pergunta 01', 'Com quantos paus se faz uma canoa?', 0, '2017-11-21 00:00:00', 3, 4),
+(11, 'Tales', '..de Mileto', 0, '2017-11-22 17:43:28', 6, 5),
+(12, 'teste', 'estÃ¡ funcionando??', 0, '2017-11-22 18:12:39', 3, 5),
+(13, 'Quantas perguntas tem no perfil?', 'Acho que sÃ£o trÃªs...', 0, '2017-11-24 20:07:04', 2, 5),
+(14, 'Quantas perguntas tem no perfil?', 'ou serÃ¡ que sÃ£o 4?', 0, '2017-11-24 20:07:34', 2, 5),
+(15, 'Tem apenas 3 perguntas no perfil...', '... yeeei :3', 0, '2017-11-24 20:08:14', 2, 5);
 
 -- --------------------------------------------------------
 
@@ -144,19 +146,24 @@ INSERT INTO `pergunta` (`idpergunta`, `prg_titulo`, `prg_descricao`, `prg_respon
 CREATE TABLE `resposta` (
   `idresposta` int(11) NOT NULL,
   `rsp_descricao` text NOT NULL,
-  `rsp_registro` datetime NOT NULL,
-  `rsp_status` varchar(45) DEFAULT NULL,
+  `rsp_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `rsp_classif` int(5) DEFAULT NULL,
-  `fk_usuario` int(11) NOT NULL
+  `fk_usuario` int(11) NOT NULL,
+  `fk_pergunta` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `resposta`
 --
 
-INSERT INTO `resposta` (`idresposta`, `rsp_descricao`, `rsp_registro`, `rsp_status`, `rsp_classif`, `fk_usuario`) VALUES
-(1, 'Exemplo Resposta 01', '2018-01-17 00:00:00', '1', 1, 1),
-(2, 'Exemplo Resposta 02', '2018-04-07 00:00:00', '2', 2, 2);
+INSERT INTO `resposta` (`idresposta`, `rsp_descricao`, `rsp_registro`, `rsp_classif`, `fk_usuario`, `fk_pergunta`) VALUES
+(1, 'Exemplo Resposta 01', '2018-01-17 00:00:00', 1, 1, 1),
+(2, 'Exemplo Resposta 02', '2018-04-07 00:00:00', 2, 2, 1),
+(3, 'uhull.. Agora tem resposta tambÃ©m ^^', '2017-11-24 20:39:23', NULL, 5, 15),
+(4, 'tem certeza? 0.0', '2017-11-24 21:03:53', NULL, 5, 13),
+(5, 'Quem é esse?', '2017-11-24 22:24:02', NULL, 3, 11),
+(6, 'TambÃ©m nÃ£o sei...', '2017-11-24 22:29:09', NULL, 5, 11),
+(7, 'Acho que Ã© um cara lÃ¡ de fÃ­sica ,-,', '2017-11-24 22:30:22', NULL, 3, 11);
 
 -- --------------------------------------------------------
 
@@ -189,16 +196,9 @@ INSERT INTO `tipo_user` (`idtipo_user`, `tipo_nome`) VALUES
 CREATE TABLE `turma` (
   `idturma` int(11) NOT NULL,
   `trm_nome` varchar(45) NOT NULL,
-  `trm_qtd` int(50) DEFAULT NULL
+  `trm_qtd` int(50) DEFAULT NULL,
+  `trm_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `turma`
---
-
-INSERT INTO `turma` (`idturma`, `trm_nome`, `trm_qtd`) VALUES
-(1, 'INFEM 401v', NULL),
-(2, 'INFEM 402v', NULL);
 
 -- --------------------------------------------------------
 
@@ -229,7 +229,7 @@ INSERT INTO `usuario` (`idusuario`, `nome_user`, `sobrenome_user`, `email`, `log
 (2, 'Iara', 'Oliveira', 'iara99oliveira@gmail.com', 'little_universe', '4ab1108ce6284ad7e517314bb7290c48a3a97ef9', 'F', '1999-02-24', 'Cursando Ensino Médio', NULL, 5),
 (3, 'Vitória', 'Eskelsen', 'vickdmeskelsen@gmail.com', 'vickeskelsen', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'F', '1999-08-18', 'Cursando Ensino Médio', NULL, 5),
 (4, 'Luiz', 'Borges', 'withtahatashi@gmail.com', 'luizu_senpai', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'M', '1999-09-07', NULL, NULL, 4),
-(5, 'Iara', 'Teste', 'teste@break.com', 'scrawldunivers', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'F', '1999-02-24', 'medio', NULL, 1);
+(5, 'Iara', 'Teste', 'teste@break.com', 'scrawldunivers', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'F', '1999-02-24', 'Ensino Médio', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -279,9 +279,7 @@ ALTER TABLE `disciplina`
 --
 ALTER TABLE `pergunta`
   ADD PRIMARY KEY (`idpergunta`),
-  ADD KEY `fk_comentario` (`fk_comentario`),
   ADD KEY `fk_disciplina` (`fk_disciplina`),
-  ADD KEY `fk_resposta` (`fk_resposta`),
   ADD KEY `fk_usuario` (`fk_usuario`);
 
 --
@@ -345,12 +343,12 @@ ALTER TABLE `disciplina`
 -- AUTO_INCREMENT for table `pergunta`
 --
 ALTER TABLE `pergunta`
-  MODIFY `idpergunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idpergunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `resposta`
 --
 ALTER TABLE `resposta`
-  MODIFY `idresposta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idresposta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tipo_user`
 --
