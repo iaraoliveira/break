@@ -1,4 +1,7 @@
-<?php include("header.php")?>
+<?php
+require 'header.php';
+require 'dao-pergunta.php';
+?>
 
 <?php
 
@@ -8,7 +11,7 @@ $id_disciplina = $_POST['id_disciplina'];
 $id_usuario = $_SESSION['id_usuario'];
 
 
-require 'dao-pergunta.php';
+
  ?>
 
 

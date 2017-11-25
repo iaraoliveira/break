@@ -4,7 +4,7 @@ require 'dao-pergunta.php';
 
 
 $id = $_SESSION['id_usuario'];
-$perguntas = listaUltimosPostsUsuario($conexao, $id);
+$perguntas = listaPerguntaWhereUsuario($conexao, $id);
 ?>
 
 <div id="text_content">

@@ -79,7 +79,7 @@
 					    unset($_SESSION['alert']);
 					}
 					?>
-					<?php include("ultimos-posts.php")?>
+					<?php require "ultimos-posts.php";?>
 				</div>
 			</div>
 

@@ -42,6 +42,25 @@ function listaPerguntaWhereUsuario($conexao, $id)
     return $perguntas;
 }
 
+function listaUltimosPostsUsuario($conexao, $id)
+{
+    $perguntas = array();
+    $resultado = mysqli_query($conexao, "SELECT p.*, d.disc_nome, u.nome_user
+                                        FROM disciplina AS d
+                                        JOIN pergunta AS p ON p.fk_disciplina = d.iddisciplina
+                                        JOIN usuario AS u ON u.idusuario = p.fk_usuario
+                                        WHERE idusuario = {$id}
+                                        ORDER BY (p.prg_registro) desc
+                                        LIMIT 3;");
+
+    while ($pergunta = mysqli_fetch_assoc($resultado))
+    {
+        array_push($perguntas, $pergunta);
+    }
+    return $perguntas;
+}
+
+
 function removePergunta($conexao, $id)
 {
     $query = "DELETE FROM pergunta WHERE idpergunta = {$id}";

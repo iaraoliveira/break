@@ -28,6 +28,9 @@
 					<p> Aqui você pode salvar sua perguntas/notas e pode separá-las por matérias.<p/>
 					<p>Além de ser um espaço totalmente privado ;)</p>
 				</div>
+				<div class="">
+					<?php  require "conteudo-notebook.php"; ?>
+				</div>
 			</div>
 		</div>
 	</div>
