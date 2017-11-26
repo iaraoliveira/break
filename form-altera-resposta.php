@@ -1,11 +1,11 @@
 <?php
 require 'header.php';
-require 'dao-pergunta.php';
-require 'dao-disciplina.php';
+
+require 'dao-resposta.php';
 
 $id = $_POST['id'];
-$pergunta = buscaPergunta($conexao, $id);
-$disciplinas = listaDisciplinas($conexao);
+$resposta = buscaResposta($conexao, $id);
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="css/feed.css">
@@ -32,23 +32,11 @@ $disciplinas = listaDisciplinas($conexao);
   <div id="grad">
     <div id="header_main">
       <div id="header_space2">
-        <form id="alterar" action="altera-pergunta.php" method="post">
+        <form id="postar" action="altera-resposta.php" method="post">
           <div class="post_area">
-
-            <input type="hidden" name="prg_id" value="<?=$pergunta['idpergunta']?>">
-            <input class="this-is-not-a-textarea" name="prg_titulo" id="title_perg" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_titulo']?>"></input>
-            <input class="this-is-not-a-textarea" name="prg_descricao" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_descricao']?>"></input>
-
+            <input class="this-is-not-a-textarea" name="rsp_descricao" onkeyup="ajustarTamanho(this)" value="<?=$resposta['rsp_descricao']?>"></input>
             <div id="post_btns">
-              <select class="" name="prg_disciplina" required>
-                  <option value="">Disciplina</option>
-                <?php foreach($disciplinas as $disciplina) :
-                  $essaEhADisciplina = $pergunta['fk_disciplina'] == $disciplina['iddisciplina'];
-                  $selecao = $essaEhADisciplina? "selected='selected'" : "";
-                ?>
-                  <option value="<?=$disciplina['iddisciplina']?>" <?=$selecao?>><?=$disciplina['disc_nome']?></option>
-                <?php endforeach ?>
-              </select>
+              <input type="hidden" name="rsp_id" value="<?=$id?>"/>
               <button type="button" id="btn_opt" onclick="show_tools()">
                   <img id="btn_opt_img" src="img/sum_icon.png" alt="+-*:" title="Usar símbolos Matemáticos">
               </button>

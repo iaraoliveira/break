@@ -86,7 +86,7 @@ input {
 }
 
  /* post */
-textarea {
+textarea, .this-is-not-a-textarea {
 	margin: auto;
 	padding: 8px 15px;
 	min-width: 500px;
@@ -139,7 +139,7 @@ textarea {
 	top: -11px;
 	z-index: 0;
 }
-#btn_posta {
+#btn_posta, #btn_altera {
 	padding: 20px 10px 10px 10px;
 	border-radius: 0px 0px 8px 8px;
 	min-width: 0px;

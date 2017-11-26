@@ -5,7 +5,7 @@
 	require 'dao-resposta.php';
 
 
-  $id = $_POST['id_pergunta'];
+  $id = $_POST['id'];
   $pergunta = buscaPergunta($conexao, $id);
 	$respostas = listaRespostaWherePergunta($conexao, $id);
 
@@ -70,6 +70,18 @@
 								<h4><?=$resposta['rsp_descricao']?></h4>
 								<p class="header_space2">Postado em: <time><?=$resposta['rsp_registro']?></time></p>
 								<p class="header_space2"><i>by <?=$resposta['nome_user']?></i></p>
+
+								<?php if($resposta['fk_usuario'] == $_SESSION['id_usuario']) {?>
+
+						      <form  action="form-altera-resposta.php" method="post">
+						          <input type="hidden" name="id" value="<?=$resposta['idresposta'] ?>" />
+						          <button>Alterar</button>
+						      </form>
+						      <form  action="exclui-resposta.php" method="post">
+						          <input type="hidden" name="id" value="<?=$resposta['idresposta'] ?>" />
+						          <button>Remover</button>
+						      </form>
+						    <?php } ?>
 
 						<?php endforeach?>
 

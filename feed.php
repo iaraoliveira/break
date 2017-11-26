@@ -16,7 +16,7 @@ $perguntas = listaPergunta($conexao);
 
     <?php if($pergunta['fk_usuario'] != $_SESSION['id_usuario']) {?>
       <form action="pergunta-detalhe.php" method="post">
-          <input type="hidden" name="id_pergunta" value="<?=$pergunta['idpergunta'] ?>" />
+          <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
           <button>Responder</button>
       </form>
     <?php }else{ ?>
