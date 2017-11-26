@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Nov-2017 às 23:40
+-- Generation Time: 26-Nov-2017 às 14:57
 -- Versão do servidor: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -28,18 +28,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `anotacao` (
   `idanotacao` int(11) NOT NULL,
-  `anota_descricao` varchar(45) DEFAULT NULL,
+  `anota_titulo` varchar(100) NOT NULL,
+  `anota_descricao` varchar(500) DEFAULT NULL,
   `anota_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `fk_disciplina` int(11) NOT NULL
+  `fk_disciplina` int(11) NOT NULL,
+  `fk_usuario` int(11) NOT NULL,
+  `anota_tipo` varchar(8) NOT NULL DEFAULT 'anotacao'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `anotacao`
 --
 
-INSERT INTO `anotacao` (`idanotacao`, `anota_descricao`, `anota_registro`, `fk_disciplina`) VALUES
-(1, 'Anotação teste 01', '2017-11-24 20:22:06', 1),
-(2, 'Anotação teste 02', '2017-11-24 20:22:06', 2);
+INSERT INTO `anotacao` (`idanotacao`, `anota_titulo`, `anota_descricao`, `anota_registro`, `fk_disciplina`, `fk_usuario`, `anota_tipo`) VALUES
+(1, '', 'Anotação teste 01', '2017-11-24 20:22:06', 1, 1, 'anotacao'),
+(2, '', 'Anotação teste 02', '2017-11-24 20:22:06', 2, 2, 'anotacao'),
+(4, 'Teste de AnotaÃ§Ã£o', 'oh, my God.. a anotaÃ§Ã£o funciona :3', '2017-11-26 11:51:44', 10, 5, 'anotacao');
 
 -- --------------------------------------------------------
 
@@ -124,21 +128,22 @@ CREATE TABLE `pergunta` (
   `prg_respondida` tinyint(1) NOT NULL DEFAULT '0',
   `prg_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `fk_disciplina` int(11) NOT NULL,
-  `fk_usuario` int(11) NOT NULL
+  `fk_usuario` int(11) NOT NULL,
+  `prg_tipo` varchar(8) NOT NULL DEFAULT 'pergunta'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `pergunta`
 --
 
-INSERT INTO `pergunta` (`idpergunta`, `prg_titulo`, `prg_descricao`, `prg_respondida`, `prg_registro`, `fk_disciplina`, `fk_usuario`) VALUES
-(1, 'Pergunta 01', 'Com quantos paus se faz uma canoa?', 0, '2017-11-21 00:00:00', 3, 4),
-(11, 'Tales..', '.. de Mileto', 0, '2017-11-22 17:43:28', 6, 5),
-(12, 'teste', 'estÃ¡ funcionando??', 0, '2017-11-22 18:12:39', 3, 5),
-(13, 'Quantas perguntas tem no perfil?', 'Acho que sÃ£o trÃªs...', 0, '2017-11-24 20:07:04', 2, 5),
-(14, 'Quantas perguntas tem no perfil?', 'ou serÃ¡ que sÃ£o 4?', 0, '2017-11-24 20:07:34', 2, 5),
-(15, 'Tem apenas 3 perguntas no perfil...', '... yeeei :3', 0, '2017-11-24 20:08:14', 2, 5),
-(16, 'Como acabar o TCC a tempo?', 'Socorro...', 0, '2017-11-24 22:43:02', 10, 3);
+INSERT INTO `pergunta` (`idpergunta`, `prg_titulo`, `prg_descricao`, `prg_respondida`, `prg_registro`, `fk_disciplina`, `fk_usuario`, `prg_tipo`) VALUES
+(1, 'Pergunta 01', 'Com quantos paus se faz uma canoa?', 0, '2017-11-21 00:00:00', 3, 4, 'pergunta'),
+(11, 'Tales..', '.. de Mileto', 0, '2017-11-22 17:43:28', 6, 5, 'pergunta'),
+(12, 'teste', 'estÃ¡ funcionando??', 0, '2017-11-22 18:12:39', 3, 5, 'pergunta'),
+(13, 'Quantas perguntas tem no perfil?', 'Acho que sÃ£o trÃªs...', 0, '2017-11-24 20:07:04', 2, 5, 'pergunta'),
+(14, 'Quantas perguntas tem no perfil?', 'ou serÃ¡ que sÃ£o 4?', 0, '2017-11-24 20:07:34', 2, 5, 'pergunta'),
+(15, 'Tem apenas 3 perguntas no perfil...', '... yeeei :3', 0, '2017-11-24 20:08:14', 2, 5, 'pergunta'),
+(16, 'Como acabar o TCC a tempo?', 'Socorro...', 0, '2017-11-24 22:43:02', 10, 3, 'pergunta');
 
 -- --------------------------------------------------------
 
@@ -166,8 +171,7 @@ INSERT INTO `resposta` (`idresposta`, `rsp_descricao`, `rsp_registro`, `rsp_clas
 (4, 'tem certeza? 0.0', '2017-11-24 21:03:53', NULL, 5, 13),
 (5, 'Quem é esse?', '2017-11-24 22:24:02', NULL, 3, 11),
 (6, 'TambÃ©m nÃ£o sei...', '2017-11-24 22:29:09', NULL, 5, 11),
-(7, 'Acho que Ã© um cara lÃ¡ de fÃ­sica ,-,', '2017-11-24 22:30:22', NULL, 3, 11),
-(8, 'calma.. vamos conseguir. JÃ¡ conseguimos atÃ© alterar essa resposta... ^-^', '2017-11-25 20:07:41', NULL, 5, 16);
+(7, 'Acho que Ã© um cara lÃ¡ de fÃ­sica ,-,', '2017-11-24 22:30:22', NULL, 3, 11);
 
 -- --------------------------------------------------------
 
@@ -255,7 +259,8 @@ CREATE TABLE `usuario_turma` (
 --
 ALTER TABLE `anotacao`
   ADD PRIMARY KEY (`idanotacao`),
-  ADD KEY `fk_disciplina` (`fk_disciplina`);
+  ADD KEY `fk_disciplina` (`fk_disciplina`),
+  ADD KEY `fk_usuario` (`fk_usuario`);
 
 --
 -- Indexes for table `caderno`
@@ -328,7 +333,7 @@ ALTER TABLE `usuario_turma`
 -- AUTO_INCREMENT for table `anotacao`
 --
 ALTER TABLE `anotacao`
-  MODIFY `idanotacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idanotacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `caderno`
 --

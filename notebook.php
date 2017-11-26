@@ -25,9 +25,19 @@
 		<div class="back_main">
 			<div id="content">
 				<div id="text_content">
-					<p> Aqui você pode salvar sua perguntas/notas e pode separá-las por matérias.<p/>
+					<p> Aqui você pode salvar suas perguntas/notas e pode separá-las por matérias.<p/>
 					<p>Além de ser um espaço totalmente privado ;)</p>
 				</div>
+				<div class="">
+					<form class="" action="form-anotacao.php" method="post">
+						<button name="go-to-form-anotacao">Adicione uma Anotação</button>
+					</form>
+					<form class="" action="index.php" method="post">
+						<button name="go-to-index">Faça uma pergunta</button>
+
+					</form>
+				</div>
+					<hr>
 				<div class="">
 					<?php  require "conteudo-notebook.php"; ?>
 				</div>

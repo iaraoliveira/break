@@ -1,31 +1,46 @@
 <?php
 
-require 'dao-pergunta.php';
+require 'dao-conteudo-notebook.php';
 
 
 $id = $_SESSION['id_usuario'];
-$perguntas = listaPerguntaWhereUsuario($conexao, $id);
+$conteudos = listaConteudoWhereUsuario($conexao, $id);
 ?>
 
 <div id="text_content">
 
   <?php
-  foreach ($perguntas as $pergunta) :
+  foreach ($conteudos as $conteudo) :
   ?>
 
-        <h2><strong><?= $pergunta['prg_titulo']?> </strong>| <?=$pergunta['prg_descricao']?></h2>
-        <p class="header_space2">Postado em: <time><?=$pergunta['prg_registro']?></time></p>
-        <p class="header_space2"><i>by <?=$pergunta['nome_user']?></i></p>
+        <h2><strong><?= $conteudo['titulo']?> </strong>| <?=$conteudo['descricao']?></h2>
+        <p class="header_space2">Postado em: <time><?=$conteudo['registro']?></time></p>
+        <p class="header_space2"><i>by <?=$conteudo['nome_user']?></i></p>
 
-        <form action="altera-pergunta.php?id=<?=$pergunta['idpergunta']?>" method="post">
-          <input type="hidden" name="id" value="<?=$pergunta['idpergunta']?>" />
+        <?php
+        if($conteudo['tipo']== "pergunta"){
+         ?>
+
+        <form action="altera-pergunta.php" method="post">
+          <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
           <button>Alterar</button>
         </form>
 
         <form action="exclui-pergunta.php" method="post">
-          <input type="hidden" name="id" value="<?=$pergunta['idpergunta']?>" />
+          <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
           <button>Remover</button>
         </form>
+        <?php }else{ ?>
+          <form action="form-altera-anotacao.php" method="post">
+            <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
+            <button>Alterar</button>
+          </form>
+
+          <form action="exclui-anotacao.php" method="post">
+            <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
+            <button>Remover</button>
+          </form>
+        <?php } ?>
 
   <?php
    endforeach
