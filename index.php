@@ -31,22 +31,32 @@
 				<div id="header_space2">
 					<form id="postar" action="adiciona-pergunta.php" method="post">
 						<div class="post_area">
-							<textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título" name="title_perg" required></textarea>
-							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p" name="pergunta" required></textarea>
+							<textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título"
+												name="title_perg" required autofocus></textarea>
+							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p"
+												name="pergunta" required></textarea>
 							<div id="post_btns">
+
 								<select class="" name="id_disciplina" required>
 										<option value="">Disciplina</option>
-									<?php foreach($disciplinas as $disciplina) : ?>
-					        	<option value="<?=$disciplina['iddisciplina']?>"><?=$disciplina['disc_nome']?></option>
+											<?php foreach($disciplinas as $disciplina) : ?>
+					        			<option value="<?=$disciplina['iddisciplina']?>">
+											<?=$disciplina['disc_nome']?>
+										</option>
 					        <?php endforeach ?>
 								</select>
+
 								<button type="button" id="btn_opt" onclick="show_tools()">
 										<img id="btn_opt_img" src="img/sum_icon.png" alt="+-*:" title="Usar símbolos Matemáticos">
 								</button>
+
 								<input type="submit" value="POSTAR" id="btn_posta"/>
 							</div>
 							<div id="tools">
-								<a id="tool" title="Abrir Fórmula" href="#" onclick="math_func()"><img src="img/formula.png" alt=""/>Abrir fórmula</a>
+								<a id="tool" title="Abrir Fórmula" href="#" onclick="math_func()">
+									<img src="img/formula.png" alt=""/>
+									Abrir fórmula
+								</a>
 							</div>
 							<div id="view">
 
@@ -58,11 +68,10 @@
 			</div>
 		</div>
 		<div class="back_main">
-
-			<?php	include("feed.php"); ?>
-
 			<div id="content">
 				<div id="text_content">
+					<?php	include("feed.php"); ?>
+
 					<p> \(a \ne 0\)</p>
 				</div>
 			</div>
