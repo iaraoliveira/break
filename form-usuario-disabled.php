@@ -1,17 +1,19 @@
 
-  <form class="" action="#" method="post">
+  <?php
+$disabled = "disabled";
+   ?>
   <label for="nome_user">Nome</label>
-  <input type="text" id="nome_user" name="nome_user" value="<?=$_SESSION['nm_usuario']?>" disabled />
+  <input type="text" id="nome_user" name="nome_user" value="<?=$_SESSION['nm_usuario']?>" <?=$disabled?> />
 
   <label for="sobrenome_user">Sobrenome</label>
-  <input type="text" id="sobrenome_user" name="sobrenome_user" value="<?=$_SESSION['sbm_usuario']?>" disabled />
+  <input type="text" id="sobrenome_user" name="sobrenome_user" value="<?=$_SESSION['sbm_usuario']?>" <?=$disabled?> />
   <br/>
 
   <label for="email_user">E-mail</label>
-  <input type="email" id="email_user" name="email_user" value="<?=$_SESSION['email']?>"disabled/>
+  <input type="email" id="email_user" name="email_user" value="<?=$_SESSION['email']?>"<?=$disabled?>/>
   <br/>
 
-  <div id="radio-genero" disabled>
+  <div id="radio-genero" <?=$disabled?>>
     <?php
     $checkedM = "";
     $checkedF = "";
@@ -29,13 +31,11 @@
   <br/>
 
   <label for="dataNasc_user">Data de Nascimento</label>
-  <input type="date" id="dataNasc_user" name="dataNasc_user" value="<?=$_SESSION['dt_nasc']?>" disabled/>
+  <input type="date" id="dataNasc_user" name="dataNasc_user" value="<?=$_SESSION['dt_nasc']?>" <?=$disabled?>/>
   <br/>
 
   <label for="escolaridade_user">Escolaridade</label>
-  <select id="escolaridade_user" name="escolaridade_user" disabled>
+  <select id="escolaridade_user" name="escolaridade_user" <?=$disabled?>>
     <option value="escolaridade"><?=$_SESSION['escolaridade']?></option>
   </select>
   <br>
-
-</form>

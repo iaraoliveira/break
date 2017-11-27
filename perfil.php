@@ -4,6 +4,7 @@
 	require 'dados-perfil.php';
 
 
+
 	/*$codigo = $_GET['idusuario'];
 	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
@@ -66,7 +67,14 @@
 				</div>
 				<div id="sessao">
 					<h3>Dados pessoais</h3>
-					<?php require 'form-usuario-disabled.php'; ?>
+
+					<form class="" action="form-altera-usuario.php" method="post">
+						<?php require 'form-usuario-disabled.php' ?>
+						<input type="submit" name="form-usuario" value="Alterar Dados">
+					</form>
+
+
+
 
 				</div>
 				<div id="sessao">
@@ -81,6 +89,7 @@
 					?>
 					<?php require "ultimos-posts.php";?>
 				</div>
+				<a href="notebook.php">Ir para o meu caderno</a>
 			</div>
 
 		</div>
@@ -92,4 +101,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
