@@ -1,6 +1,6 @@
 <?php
   function inserePergunta($conexao, $title_perg, $pergunta, $disciplina_id, $id_usuario){
-    if ($title_perg != "" && $id_disciplina != ""){
+    if ($title_perg != "" && $disciplina_id != ""){
       $query = "insert into pergunta
                     (prg_titulo, prg_descricao, fk_disciplina, fk_usuario) values
                     ('{$title_perg}','{$pergunta}', {$disciplina_id}, {$id_usuario})";
