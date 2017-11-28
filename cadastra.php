@@ -1,6 +1,5 @@
 <?php
 	/* cadastra.php */
-
 	require 'verificaDados.php';
 ?>
 <!DOCTYPE HTML>

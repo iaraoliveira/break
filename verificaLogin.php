@@ -1,12 +1,13 @@
 <?php
 	/* verificaLogin.php */
+
 	session_start();
 
 	/* arquivo de configuração */
-	require 'config-painel.php';
+	require_once 'config-painel.php';
 
 	/* Conexão com BD */
-	require 'classes/Db.class.php';
+	require_once 'classes/Db.class.php';
 
 	$banco = new DB();
 

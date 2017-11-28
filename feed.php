@@ -40,15 +40,15 @@
                 </button>
               </div>
           </form>
-        
+
         <?php
           }else{
         ?>
           <div id="opt">
-            <form action="form-altera-pergunta.php" method="post" class="opt">
+            <form action="#" method="post" class="opt">
                 <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>"/>
                 <div id="reply">
-                  <button id="btn_opt">
+                  <button id="btn_opt" onclick="<?php require 'form-altera-pergunta.php'; ?>">
                       <img id="btn_opt_img" src="img/edit.png" alt=""/>
                   </button>
                 </div>

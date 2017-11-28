@@ -34,7 +34,10 @@
 		<div id="grad">
 			<div id="header_main">
 				<div id="header_space2">
-          <h2><strong><?= $pergunta['prg_titulo']?> </strong>| <?=$pergunta['prg_descricao']?></h2>
+          <h2><span style="font-weight: 800;"><?= $pergunta['prg_titulo']?></span></h2>
+						<p id="p_desc">
+							<?=$pergunta['prg_descricao']?>
+						</p>
             <p class="header_space2">Postado em: <time><?=$pergunta['prg_registro']?></time></p>
             <p class="header_space2"><i>by <?=$pergunta['nome_user']?></i></p>
 				</div>
@@ -42,8 +45,6 @@
 			</div>
 		</div>
 		<div class="back_main">
-
-
 			<div id="content">
 				<div id="text_content">
 					<form id="postar" action="adiciona-resposta.php" method="post">
