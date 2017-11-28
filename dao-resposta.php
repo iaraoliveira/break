@@ -49,3 +49,18 @@ function removeResposta($conexao, $id)
     $query = "DELETE FROM resposta WHERE idresposta = {$id}";
     return mysqli_query($conexao, $query);
 }
+
+function procuraResposta($conexao, $search){
+  $respostas = array();
+  $query = "SELECT r.*, u.nome_user
+            FROM resposta AS r
+            INNER JOIN usuario AS u ON u.idusuario = r.fk_usuario
+            WHERE r.rsp_descricao LIKE '%{$search}%' OR r.rsp_registro LIKE '%{$search}%'
+            OR u.nome_user LIKE '%{$search}%';";
+  $resultado = mysqli_query($conexao, $query);
+  while ($resposta = mysqli_fetch_assoc($resultado)){
+    array_push($respostas, $resposta);
+  }
+  return $respostas;
+
+}

@@ -74,3 +74,19 @@
       $resultado= mysqli_query($conexao, $query);
       return mysqli_fetch_assoc($resultado);
   }
+
+  function procuraPergunta($conexao, $search){
+    $perguntas = array();
+    $query = "SELECT p.*, d.disc_nome, u.nome_user
+              FROM disciplina AS d
+                JOIN pergunta AS p ON p.fk_disciplina = d.iddisciplina
+                JOIN usuario AS u ON u.idusuario = p.fk_usuario
+              WHERE p.prg_titulo LIKE '%{$search}%' OR p.prg_descricao LIKE '%{$search}%' OR p.prg_registro LIKE '%{$search}%'
+              OR d.disc_nome LIKE '%{$search}%' or u.nome_user LIKE '%{$search}%';";
+    $resultado = mysqli_query($conexao, $query);
+    while ($pergunta = mysqli_fetch_assoc($resultado)){
+      array_push($perguntas, $pergunta);
+    }
+    return $perguntas;
+
+  }

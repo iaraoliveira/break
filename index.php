@@ -70,7 +70,7 @@
 		<div class="back_main">
 			<div id="content">
 				<div id="text_content">
-					<?php	include("feed.php");?>
+					<?php	require 'feed.php';?>
 
 					<p> \(a \ne 0\)</p>
 				</div>

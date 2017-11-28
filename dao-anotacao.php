@@ -36,3 +36,21 @@ function buscaAnotacao($conexao, $id)
     return mysqli_fetch_assoc($resultado);
 
 }
+
+function procuraAnotacao($conexao, $search, $id)
+{
+    $anotacoes = array();
+    $query = "SELECT a.*, d.disc_nome, u.nome_user
+              FROM disciplina AS d
+              JOIN anotacao AS a ON a.fk_disciplina = d.iddisciplina
+              JOIN usuario AS u ON u.idusuario = a.fk_usuario
+              WHERE a.anota_titulo LIKE '%{$search}%' OR a.anota_descricao LIKE '%{$search}%'
+              OR a.anota_registro LIKE '%{$search}%' OR d.disc_nome LIKE '%{$search}%' OR u.nome_user LIKE '%{$search}%'
+              AND a.fk_usuario = {$id}";
+    $resultado = mysqli_query($conexao, $query);
+    while ($anotacao = mysqli_fetch_assoc($resultado)){
+      array_push($anotacoes, $anotacao);
+    }
+    return $anotacoes;
+
+}
