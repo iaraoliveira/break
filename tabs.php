@@ -6,7 +6,7 @@
   <div id="tab" style="border-radius: 20px 0px 0px 0px;">
   <form class="" action="search.php" method="post">
 
-      <input type="text" name="search" title="Busque o que quiser ^^" placeholder="ex.: Cachorro Pensa?" autofocus required/>
+      <input type="text" name="search" title="Busque o que quiser ^^" placeholder="ex.: Cachorro Pensa?" required/>
       <button id="busca" type="submit">
         Buscar
       </button>
