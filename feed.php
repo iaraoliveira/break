@@ -39,7 +39,7 @@
           }else{
         ?>
           <div id="opt">
-            <form action="form-altera-pergunta.php" method="post" >
+            <form action="form-altera-pergunta.php" method="post" class="opt">
                 <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>"/>
                 <div id="reply">
                   <button id="btn_opt">
@@ -47,9 +47,9 @@
                   </button>
                 </div>
             </form>
-            <form  action="exclui-pergunta.php" method="post">
+            <form  action="exclui-pergunta.php" method="post" class="opt">
                 <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
-                <div id="reply">
+                <div id="reply2">
                   <button id="btn_opt">
                       <img id="btn_opt_img" src="img/eraser.png" alt=""/>
                   </button>
