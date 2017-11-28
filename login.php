@@ -17,30 +17,30 @@
 	<title>	Break | Entra aí</title>
 </head>
 <body>
-		
+
 	<div class="box-that">
 		<img id="hominho" src="img/Hominho.png"
 			 alt="garoto, 3 braços a direta e, nas mãos: indicador apontado para cima, balão de conversa e
 				  livros empilhados. Mão esquerda com celular na mão.">
-		
+
 		<div id="sub-box">
 			<h1>LOGIN</h1>
 			<form action="verificaLogin.php" method="post">
 				<label for="user_input">Usuário</label>
-				<input type="text" id="user_input" title="Seu nome de usuário" placeholder="ex.: 5capitão" required autofocus name="login"/> 
+				<input type="text" id="user_input" title="Seu nome de usuário" placeholder="ex.: 5capitão" required autofocus name="login"/>
 				<br/>
-			
+
 				<label for="pass_input">Senha</label>
-				<input type="password" title="Insira a senha" id="pass_input" required name="senha"/> 
+				<input type="password" title="Insira a senha" id="pass_input" required name="senha"/>
 				<br/>
 				<div id="down-inputs">
 					<a href="cadastra.php" title="Crie uma conta já">Quero criar uma conta.</a>
 					<input type="submit" id="button-entry" value="Entrar"/>
 				</div>
 			</form>
-			
-			
-		</div> 
+
+
+		</div>
 		<div id="rodape">
 			<a href="promocional.php" title="Ma que cartso que é breakuro?" id="saiba_mais">O que é break?</a>
 		</div>

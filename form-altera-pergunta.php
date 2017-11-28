@@ -1,11 +1,11 @@
 <?php
-require 'header.php';
-require 'dao-pergunta.php';
-require 'dao-disciplina.php';
+  require 'header.php';
+  require 'dao-pergunta.php';
+  require 'dao-disciplina.php';
 
-$id = $_POST['id'];
-$pergunta = buscaPergunta($conexao, $id);
-$disciplinas = listaDisciplinas($conexao);
+  $id = $_POST['id'];
+  $pergunta = buscaPergunta($conexao, $id);
+  $disciplinas = listaDisciplinas($conexao);
 ?>
 
 <link rel="stylesheet" type="text/css" href="css/feed.css">
@@ -34,11 +34,16 @@ $disciplinas = listaDisciplinas($conexao);
       <div id="header_space2">
         <form id="alterar" action="altera-pergunta.php" method="post">
           <div class="post_area">
-
             <input type="hidden" name="prg_id" value="<?=$pergunta['idpergunta']?>">
-            <input class="this-is-not-a-textarea" name="prg_titulo" id="title_perg" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_titulo']?>"></input>
-            <input class="this-is-not-a-textarea" name="prg_descricao" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_descricao']?>"></input>
+            <textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título"
+                      name="title_perg" required autofocus><?=$pergunta['prg_titulo']?></textarea>
 
+            <textarea onkeyup="ajustarTamanho(this)" onclick="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p"
+                      name="pergunta" id="pergunta" required><?=$pergunta['prg_descricao']?></textarea>
+  <!--
+                     <input class="this-is-not-a-textarea" name="prg_titulo" id="title_perg" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_titulo']?>"></input>
+                      <input class="this-is-not-a-textarea" name="prg_descricao" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_descricao']?>"></input>
+  -->
             <div id="post_btns">
               <select class="" name="prg_disciplina" required>
                   <option value="">Disciplina</option>
@@ -52,7 +57,7 @@ $disciplinas = listaDisciplinas($conexao);
               <button type="button" id="btn_opt" onclick="show_tools()">
                   <img id="btn_opt_img" src="img/sum_icon.png" alt="+-*:" title="Usar símbolos Matemáticos">
               </button>
-              <input type="submit" value="ALTERAR" id="btn_altera"/>
+              <input type="submit" value="ALTERAR" id="btn_posta"/>
             </div>
             <div id="tools">
               <a id="tool" title="Abrir Fórmula" href="#" onclick="math_func()"><img src="img/formula.png" alt=""/>Abrir fórmula</a>
