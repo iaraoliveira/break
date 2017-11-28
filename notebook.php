@@ -1,8 +1,9 @@
 <?php
 	/* Notebook.php */
-	include	'header.php';
+	require 'header.php';
 ?>
-<link rel="stylesheet" type="text/css" href="css/feed.css">
+
+	<link rel="stylesheet" type="text/css" href="css/feed.css">
 	<script type="text/javascript" src="js/feed.js"></script>
 <title>Break | Perfil</title>
 </head>
@@ -18,7 +19,7 @@
 				<div id="header_space2">
 					<h2><strong>Header 2 </strong>| Este é seu caderno!</h2>
 					<p class="header_space2">Postado em: <time>23 de julho de 2017</time></p>
-					<p class="header_space2"><i>by Albuquerque</i></p>
+					<p class="header_space2"><i>by Break</i></p>
 				</div>
 			</div>
 		</div>
@@ -39,6 +40,7 @@
 				</div>
 					<hr>
 				<div class="">
+
 					<?php  require "conteudo-notebook.php"; ?>
 				</div>
 			</div>
