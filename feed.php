@@ -1,9 +1,30 @@
 <?php
   require 'dao-pergunta.php';
+  require 'dao-conteudo-feed.php';
+
+  $materias = listaMateriasDoPost($conexao);
   $perguntas = listaPergunta($conexao);
+?>
+
+<link rel="stylesheet" type="text/css" href="css/filtro-conteudo.css">
+
+<script type="text/javascript" src="js/filtro-conteudo.js"></script>
+<div id="text_content">
+
+      <input type="radio" onclick="filterSelection('all')" name="materia" checked> Todas as Matérias
+  <?php
+    foreach ($materias as $materia) {
+  ?>
+      <input type="radio" onclick="filterSelection('<?=$materia['disc_apelido']?>')" name="materia"> <?=$materia['disc_apelido']?>
+
+  <?php
+    }
+   ?>
+
+  <?php
     foreach ($perguntas as $pergunta) :
   ?>
-  <div id="topic">
+  <div id="topic" class="filterDiv <?=$pergunta['disc_apelido']?> show">
     <div id="balaozin">
       <div id="tag_disc" style="background-color: <?=$pergunta['disc_back_color']?>;">
         <p id="text_tag" style="color:  <?=$pergunta['disc_textcolor']?>;">
@@ -68,6 +89,7 @@
       ?>
 
     </div>
+  </div>
     <?php
       endforeach
      ?>

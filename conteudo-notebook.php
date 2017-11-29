@@ -8,9 +8,9 @@ $id = $_SESSION['id_usuario'];
 $conteudos = listaConteudoWhereUsuario($conexao, $id);
 $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
 ?>
-<link rel="stylesheet" type="text/css" href="css/filtro-notebook.css">
+<link rel="stylesheet" type="text/css" href="css/filtro-conteudo.css">
 
-<script type="text/javascript" src="js/filtro-conteudo-notebook.js"></script>
+<script type="text/javascript" src="js/filtro-conteudo.js"></script>
 <div id="text_content">
 
       <input type="radio" onclick="filterSelection('all')" name="materia" checked> Todas as Matérias
