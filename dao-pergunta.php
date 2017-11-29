@@ -14,7 +14,7 @@
                   prg_titulo = '{$titulo}',
                   prg_descricao = '{$descricao}',
                   fk_disciplina = {$disciplina_id}
-                WHERE idpergunta={$id}";
+                WHERE idpergunta= {$id} ";
       $resultado = mysqli_query($conexao, $query);
       return $resultado;
   }

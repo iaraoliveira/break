@@ -9,7 +9,8 @@
 	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/feed.css">
 	<title>Break | Perfil</title>
 	<script type="text/javascript">
 		$(document).ready(function(){
