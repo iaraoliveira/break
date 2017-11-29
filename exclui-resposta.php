@@ -6,17 +6,17 @@ $id = $_POST['id'];
 
 if(removeResposta($conexao, $id)){
 
-  ?>
-  <p class="text-success">Resposta excluida com sucesso!</p>
+  $_SESSION['alert_tipo'] = "text_success";
+  $_SESSION["alert"] = "Resposta excluída com sucesso.";
+  header("Location: index.php");
 
-  <?php
-  }
-  else
-  {
+  } else {
       $msg = mysqli_error($conexao);
-  ?>
-  <p class="text-danger">A resposta não foi excluida: <?=$msg ?></p>
-  <?php
+
+      $_SESSION['alert_tipo'] = "text_danger";
+      $_SESSION["alert"] = "Erro ao excluir sua resposta: ".$msg;
+      header("Location: index.php");
   }
+
 
 die();

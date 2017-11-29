@@ -17,6 +17,12 @@ $perguntas = listaUltimosPostsUsuario($conexao, $id);
         <p class="header_space2">Postado em: <time><?=$pergunta['prg_registro']?></time></p>
         <p class="header_space2"><i>by <?=$pergunta['nome_user']?></i></p>
 
+        <form action="pergunta-detalhe.php" method="post">
+            <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
+            <input type="submit" name="" value="Ver Mais...">
+        </form>
+
+<!--
         <form action="form-altera-pergunta.php" method="post">
           <input type="hidden" name="id" value="<?=$pergunta['idpergunta']?>" />
           <button>Alterar</button>
@@ -26,7 +32,7 @@ $perguntas = listaUltimosPostsUsuario($conexao, $id);
           <input type="hidden" name="id" value="<?=$pergunta['idpergunta']?>" />
           <button>Remover</button>
         </form>
-
+-->
   <?php
    endforeach
   ?>

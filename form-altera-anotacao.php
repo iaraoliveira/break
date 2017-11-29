@@ -36,8 +36,8 @@ $disciplinas = listaDisciplinas($conexao);
           <div class="post_area">
 
             <input type="hidden" name="anota_id" value="<?=$anotacao['idanotacao']?>" >
-            <input class="this-is-not-a-textarea" name="anota_titulo" id="title_perg" onkeyup="ajustarTamanho(this)" value="<?=$anotacao['anota_titulo']?>"></input>
-            <input class="this-is-not-a-textarea" name="anota_descricao" onkeyup="ajustarTamanho(this)" value="<?=$anotacao['anota_descricao']?>"></input>
+            <textarea name="anota_titulo" id="title_perg" onkeyup="ajustarTamanho(this)" ><?=$anotacao['anota_titulo']?></textarea>
+            <textarea name="anota_descricao" onkeyup="ajustarTamanho(this)"><?=$anotacao['anota_descricao']?></textarea>
 
             <div id="post_btns">
               <select class="" name="anota_disciplina" required>

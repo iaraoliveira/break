@@ -36,7 +36,7 @@ $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
         if($conteudo['tipo']== "pergunta"){
          ?>
 
-        <form action="altera-pergunta.php" method="post">
+        <form action="form-altera-pergunta.php" method="post">
           <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
           <button>Alterar</button>
         </form>

@@ -9,16 +9,16 @@ $disciplina_id = $_POST['anota_disciplina'];
 
 if(alteraAnotacao($conexao, $id, $titulo, $descricao, $disciplina_id)){
 
-?>
-<p class="text-success">Anotação alterada com sucesso!</p>
-
-<?php
+  $_SESSION['alert_tipo'] = "text_success";
+  $_SESSION["alert"] = "Anotação alterada com sucesso.";
+  header("Location: notebook.php");
 }
 else
 {
     $msg = mysqli_error($conexao);
-?>
-<p class="text-danger">A anotação não foi alterada: <?=$msg ?></p>
-<?php
+    $_SESSION['alert_tipo'] = "text_success";
+    $_SESSION["alert"] = "Não foi possível alterar sua anotação: \n".$msg;
+    header("Location: notebook.php");
 }
+die();
 ?>

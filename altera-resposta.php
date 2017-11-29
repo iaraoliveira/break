@@ -7,16 +7,14 @@ $descricao = $_POST['rsp_descricao'];
 
 if(alteraResposta($conexao, $id, $descricao)){
 
-?>
-<p class="text-success">Resposta alterada com sucesso!</p>
+  $_SESSION['alert_tipo'] = "text_success";
+  $_SESSION["alert"] = "Resposta alterada com sucesso.";
+  header("Location: index.php");
 
-<?php
-}
-else
-{
-    $msg = mysqli_error($conexao);
-?>
-<p class="text-danger">A resposta não foi alterada: <?=$msg ?></p>
-<?php
-}
-?>
+  } else {
+      $msg = mysqli_error($conexao);
+
+      $_SESSION['alert_tipo'] = "text_danger";
+      $_SESSION["alert"] = "Erro ao alterar sua resposta: ".$msg;
+      header("Location: index.php");
+  }

@@ -36,10 +36,10 @@
           <div class="post_area">
             <input type="hidden" name="prg_id" value="<?=$pergunta['idpergunta']?>">
             <textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título"
-                      name="title_perg" required autofocus><?=$pergunta['prg_titulo']?></textarea>
+                      name="prg_titulo" required autofocus><?=$pergunta['prg_titulo']?></textarea>
 
             <textarea onkeyup="ajustarTamanho(this)" onclick="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p"
-                      name="pergunta" id="pergunta" required><?=$pergunta['prg_descricao']?></textarea>
+                      name="prg_descricao" id="pergunta" required><?=$pergunta['prg_descricao']?></textarea>
   <!--
                      <input class="this-is-not-a-textarea" name="prg_titulo" id="title_perg" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_titulo']?>"></input>
                       <input class="this-is-not-a-textarea" name="prg_descricao" onkeyup="ajustarTamanho(this)" value="<?=$pergunta['prg_descricao']?>"></input>

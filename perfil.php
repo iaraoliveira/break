@@ -8,6 +8,7 @@
 	/*$codigo = $_GET['idusuario'];
 	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Break | Perfil</title>
 	<script type="text/javascript">
@@ -80,11 +81,12 @@
 				<div id="sessao">
 					<h3>Últimos posts</h3>
 					<?php
-					if (isset($_SESSION['alert'])){
+					if (isset($_SESSION['alert']) && isset($_SESSION['alert_tipo'])){
 					?>
-					<p><bold><?=$_SESSION['alert'] ?></bold></p>
+					<p class="<?=$_SESSION['alert_tipo']?>"><?=$_SESSION['alert'] ?></p>
 					<?php
 					    unset($_SESSION['alert']);
+					    unset($_SESSION['alert_tipo']);
 					}
 					?>
 					<?php require "ultimos-posts.php";?>

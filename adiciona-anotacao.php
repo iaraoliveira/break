@@ -12,13 +12,15 @@ $id_usuario = $_SESSION['id_usuario'];
 
 <?php
 if(insereAnotacao($conexao, $titulo, $descricao, $id_usuario, $id_disciplina)) {
-?>
-<p>Anotação adicionada com sucesso</p>
-<?php
+
+$_SESSION['alert_tipo'] = "text_success";
+$_SESSION["alert"] = "Anotação inserida com sucesso.";
+header("Location: notebook.php");
+
 } else {
     $msg = mysqli_error($conexao);
-?>
-<p >ERRO AO ADICIONAR ANOTAÇÃO: <?= $msg ?></p>
-<?php
+
+    $_SESSION['alert_tipo'] = "text_danger";
+    $_SESSION["alert"] = "Erro ao adicionar anotação: ".$msg;
+    header("Location: notebook.php");
 }
-?>

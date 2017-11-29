@@ -51,7 +51,7 @@
 						<div class="post_area">
 							<textarea onkeyup="ajustarTamanho(this)" placeholder="Sabe a resposta? Então conte pra gente ;)" name="resposta" required></textarea>
 							<div id="post_btns">
-								<input type="hidden" name="id_pergunta" value="<?=$id?>"/>
+								<input type="hidden" name="id" value="<?=$id?>"/>
 								<button type="button" id="btn_opt" onclick="show_tools()">
 										<img id="btn_opt_img" src="img/sum_icon.png" alt="+-*:" title="Usar símbolos Matemáticos">
 								</button>
@@ -65,6 +65,15 @@
 							</div>
 						</div>
 					</form>
+					<?php
+						if (isset($_SESSION['alert'])){
+					?>
+					<p class="<?=$_SESSION['alert_tipo']?>"><?=$_SESSION['alert'] ?></p>
+					<?php
+							unset($_SESSION['alert']);
+							unset($_SESSION['alert_tipo']);
+						}
+					 ?>
 
 						<?php	foreach ($respostas as $resposta) :	?>
 

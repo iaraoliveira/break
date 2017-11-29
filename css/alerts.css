@@ -1,0 +1,34 @@
+/* alerts.css */
+
+.alert_danger {
+	margin: auto;
+	background-color: rgba(252, 111, 111, 0.7);
+	color: #fafafa;
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+}
+
+.alert_success {
+	margin: auto;
+	background-color: rgba(122, 252, 108, 0.7);
+	color: #0e0e0e;
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+}
+
+.text_success {
+  color: #28a745 !important;
+	font-weight: 800;
+}
+
+a.text_success:focus, a.text_success:hover {
+  color: #1e7e34 !important;
+}
+
+.text_danger {
+  color: #dc3545 !important;
+	font-weight: 800;
+}
+
+a.text_danger:focus, a.text_danger:hover {
+  color: #bd2130 !important;
+}
