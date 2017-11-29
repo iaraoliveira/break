@@ -25,7 +25,7 @@
 	<meta name="description" content="Feed de postagens">
 	<meta name="keywords" content="Break">
 	<meta name="author" content="Iara; Vitória; Luiz e; Vinícius J">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/alerts.css">

@@ -86,44 +86,61 @@ input {
 }
 
  /* post */
-textarea, .this-is-not-a-textarea {
-	margin: auto;
-	padding: 8px 15px;
-	min-width: 500px;
-	resize: none;
-	border: none;
-	border-radius: 8px;
-	box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+		textarea, .this-is-not-a-textarea {
+			margin: auto;
+			padding: 8px 15px;
+			min-width: 500px;
+			resize: none;
+			border: none;
+			border-radius: 8px;
+			box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 
-	text-align: justify;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 12pt;
-	overflow: hidden;
+			text-align: justify;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 12pt;
+			overflow: hidden;
 
-	position: relative;
-	z-index: 1;
+			position: relative;
+			z-index: 1;
 
-}
+		}
 
-#title_perg{
-	background-color: #fbf3d7;
-	box-shadow: none;
+		#title_perg{
+			background-color: #fbf3d7;
+			box-shadow: none;
 
-	text-align: right;
-	font-size: 16pt;
-	font-weight: 700;
-	color: #0e0e0e;
+			text-align: right;
+			font-size: 16pt;
+			font-weight: 700;
+			color: #0e0e0e;
 
-	padding-bottom: 2px;
-	top: 15px;
-}
+			padding-bottom: 2px;
+			top: 15px;
+		}
 
-@media screen and (max-width: 400px) {
-	textarea {
-		min-width: 200px;
-	}
+		@media screen and (max-width: 570px){
+			#title_perg {
+					text-align: center;
+				}
+			textarea {
+					min-width: 300px;
+				}
 
-}
+			#postar{
+
+					text-align: center;
+				}
+		}
+
+		@media screen and (max-width: 400px) {
+			textarea {
+				min-width: 200px;
+			}
+			* {
+				font-size: 90%;
+			}
+
+		}
 
 .post_area {
 	margin: auto;
@@ -139,81 +156,107 @@ textarea, .this-is-not-a-textarea {
 	top: -11px;
 	z-index: 0;
 }
-#btn_posta, #btn_altera {
-	padding: 20px 10px 10px 10px;
-	border-radius: 0px 0px 8px 8px;
-	min-width: 0px;
-	min-height: 0px;
-	margin: auto;
+		#btn_posta, #btn_altera {
+			padding: 20px 10px 10px 10px;
+			border-radius: 0px 0px 8px 8px;
+			min-width: 0px;
+			min-height: 0px;
+			margin: auto;
 
-	background-color: #279ecf;
-	color: #fafafa;
+			background-color: #279ecf;
+			color: #fafafa;
 
-	position: relative;
-	top: -10px;
-	transition: box-shadow 1s;
-	transition: top 0.2s;
+			position: relative;
+			top: -10px;
+			transition: box-shadow 1s;
+			transition: top 0.2s;
 
-}
-input#btn_posta:hover {
-	cursor: pointer;
-	box-shadow: 2px 2px 10px rgba(0,0,0, 0.1);
-	top: 0px;
-}
+		}
+		input#btn_posta:hover {
+			cursor: pointer;
+			box-shadow: 2px 2px 10px rgba(0,0,0, 0.1);
+			top: 0px;
+		}
 
-#btn_opt {
-	padding: 20px 10px 5px 10px;
-	background: none;
-	border: none;
-	margin: auto;
-	margin-right: 10px;
-	background-color: #279ecf;
-	border-radius: 0px 0px 8px 8px;
-	transition: box-shadow 1s;
-	transition: padding 0.2s;
-	position: relative;
-	top: -5px;
-	transition: top 0.2s;
-}
+/* down post */
 
-#btn_opt:hover {
-	cursor: pointer;
-	box-shadow: 2px 2px 10px rgba(0,0,0, 0.1);
-	top: 5px;
-}
+		#btn_opt {
+			padding: 20px 10px 5px 10px;
+			background: none;
+			border: none;
+			margin: auto;
+			margin-right: 10px;
+			background-color: #279ecf;
+			border-radius: 0px 0px 8px 8px;
+			transition: box-shadow 1s;
+			transition: padding 0.2s;
+			position: relative;
+			top: 0px;
+			transition: top 0.2s;
 
-#reply {
-	/*position: relative;
-		top: -40px;
-	*/
-	z-index: 1;
+		}
 
-	max-width: 100px;
-	margin-right: 0px	;
+		#btn_opt_erase {
+			padding: 20px 10px 5px 10px;
+			background: none;
+			border: none;
+			margin: auto;
+			margin-right: 10px;
+			background-color: #279ecf;
+			border-radius: 0px 0px 8px 8px;
+			transition: box-shadow 1s;
+			transition: padding 0.2s;
+			position: relative;
+			top: 0px;
+			transition: top 0.2s;
+			background-color: #f25252;
+		}
 
-}
-#reply2 {
-	/*position: relative;
-		left: 50px;
-		top: -95px;
-	*/
-	z-index: 1;
-	max-width: 100px;
-	margin-right: 0px	;
-}
 
-form.opt {
-	margin: 0px;
-	text-align: left;
-	max-width: 50px;
+		#btn_opt:hover, #btn_opt_erase:hover {
+			cursor: pointer;
+			box-shadow: 2px 2px 10px rgba(0,0,0, 0.1);
+			top: 5px;
 
-}
+		}
 
-#btn_opt_img {
-	max-width: 20px;
-	max-height: 20px;
+		#reply {
+			position: relative;
 
-}
+			z-index: 1;
+			max-width: 100px;
+			margin-right: 0px	;
+			top: -41px;
+
+		}
+		#reply2 {
+			position: relative;
+			/*	left: 50px;
+				top: -95px;
+		*/
+			z-index: 1;
+			max-width: 100px;
+			margin-left: 0px	;
+			right: -100px;
+			top: -56px;
+			text-indent: 0px;
+		}
+
+		form.opt {
+			margin: 0px;
+			text-align: center;
+			max-width: 50px;
+			position: relative;
+			top: -41px;
+
+		}
+
+		#btn_opt_img {
+			max-width: 20px;
+			max-height: 20px;
+
+		}
+
 
 #tools {
 	max-height: 60px;

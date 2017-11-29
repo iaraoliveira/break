@@ -42,11 +42,11 @@
 				<div class="">
 					<?php
 						if (isset($_SESSION['alert'])){
-					?>
-					<p class="<?=$_SESSION['alert_tipo']?>"><?=$_SESSION['alert'] ?></p>
-					<?php
-							unset($_SESSION['alert']);
-							unset($_SESSION['alert_tipo']);
+								?>
+								<p class="<?=$_SESSION['alert_tipo']?>"><?=$_SESSION['alert']?></p>
+								<?php
+								unset($_SESSION['alert']);
+								unset($_SESSION['alert_tipo']);
 						}
 					 ?>
 					<?php  require "conteudo-notebook.php"; ?>

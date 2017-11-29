@@ -45,18 +45,18 @@
           }else{
         ?>
           <div id="opt">
-            <form action="#" method="post" class="opt">
-                <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>"/>
+            <form action="form-altera-pergunta.php" method="post">
+                          <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>"/>
                 <div id="reply">
-                  <button id="btn_opt" onclick="<?php require 'form-altera-pergunta.php'; ?>">
+                  <button id="btn_opt">
                       <img id="btn_opt_img" src="img/edit.png" alt=""/>
                   </button>
                 </div>
             </form>
             <form  action="exclui-pergunta.php" method="post" class="opt">
-                <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
+                        <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
                 <div id="reply2">
-                  <button id="btn_opt">
+                  <button id="btn_opt_erase">
                       <img id="btn_opt_img" src="img/eraser.png" alt=""/>
                   </button>
                 </div>
@@ -66,7 +66,7 @@
       <?php
           }
       ?>
-      </div>
+
     </div>
     <?php
       endforeach
