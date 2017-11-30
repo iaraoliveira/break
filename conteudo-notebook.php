@@ -26,38 +26,78 @@ $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
   <?php
   foreach ($conteudos as $conteudo) :
   ?>
-      <div class="filterDiv <?=$conteudo['disc_apelido']?> show">
-        <h2><strong><?= $conteudo['titulo']?> </strong>| <?=$conteudo['descricao']?></h2>
-        <p class="header_space2">Postado em: <time><?=$conteudo['registro']?></time></p>
-        <p class="header_space2"><i>by <?=$conteudo['nome_user']?></i></p>
-
+      <div id="topic" class="filterDiv <?=$conteudo['disc_apelido']?> show">
 
         <?php
         if($conteudo['tipo']== "pergunta"){
          ?>
+         <div id="balaozin">
+           <div id="tag_disc" style="background-color: <?=$conteudo['disc_back_color']?>;">
+             <p id="text_tag" style="color:  <?=$conteudo['disc_textcolor']?>;">
+               <?=$conteudo['disc_apelido']?>
+             </p>
+           </div>
+           <h2><span style="font-weight: 800;"><?= $conteudo['titulo']?></h2>
+           <p id="p_desc"><?=substr($conteudo['descricao'], 0, 70)?></p>
 
-        <form action="form-altera-pergunta.php" method="post">
-          <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
-          <button>Alterar</button>
-        </form>
+           <form action="pergunta-detalhe.php" method="post">
+               <input type="hidden" name="id" value="<?=$conteudo['id'] ?>" />
+               <input type="submit" name="" value="Ver Mais...">
+           </form>
 
-        <form action="exclui-pergunta.php" method="post">
-          <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
-          <button>Remover</button>
-        </form>
-        <?php }else{ ?>
-          <form action="form-altera-anotacao.php" method="post">
-            <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
-            <button>Alterar</button>
-          </form>
 
-          <form action="exclui-anotacao.php" method="post">
-            <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
-            <button>Remover</button>
-          </form>
-        <?php } ?>
+         </div ::after>
 
-        </div>
+         <div id="baixo_balaozin">
+             <p class="header_space2">
+                 Postado em: <time><?=$conteudo['registro']?></time>
+             </p>
+             <p class="header_space2">
+               <i>by <?=$conteudo['nome_user']?></i>
+             </p>
+
+               <div id="opt">
+                 <form action="form-altera-pergunta.php" method="post">
+                               <input type="hidden" name="id" value="<?=$conteudo['id'] ?>"/>
+                     <div id="reply">
+                       <button id="btn_opt">
+                           <img id="btn_opt_img" src="img/edit.png" alt=""/>
+                       </button>
+                     </div>
+                 </form>
+                 <form  action="exclui-pergunta.php" method="post" class="opt">
+                             <input type="hidden" name="id" value="<?=$conteudo['id'] ?>" />
+                     <div id="reply2">
+                       <button id="btn_opt_erase">
+                           <img id="btn_opt_img" src="img/eraser.png" alt=""/>
+                       </button>
+                     </div>
+                 </form>
+               </div>
+
+           </div>
+         
+                </form>
+                <?php }else{ ?>
+
+                  <h2><strong><?= $conteudo['titulo']?> </strong>| <?=$conteudo['descricao']?></h2>
+                  <p class="header_space2">Postado em: <time><?=$conteudo['registro']?></time></p>
+                  <p class="header_space2"><i>by <?=$conteudo['nome_user']?></i></p>
+
+
+                  <form action="form-altera-anotacao.php" method="post">
+                    <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
+                    <button>Alterar</button>
+                  </form>
+
+                  <form action="exclui-anotacao.php" method="post">
+                    <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
+                    <button>Remover</button>
+                  </form>
+                <?php } ?>
+
+      </div>
+
 
   <?php
    endforeach

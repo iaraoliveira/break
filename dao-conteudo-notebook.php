@@ -9,6 +9,8 @@ function listaConteudoWhereUsuario($conexao, $id)
               p.prg_registro AS registro,
  		          p.prg_tipo AS tipo,
               d.disc_nome,
+              d.disc_textcolor,
+              d.disc_back_color,
               d.disc_apelido,
               u.nome_user
 		          FROM disciplina AS d
@@ -22,6 +24,8 @@ function listaConteudoWhereUsuario($conexao, $id)
  		          a.anota_registro AS registro,
  		          a.anota_tipo AS tipo,
  		          d.disc_nome,
+              d.disc_textcolor,
+              d.disc_back_color,
               d.disc_apelido,
  		          u.nome_user
               FROM disciplina AS d

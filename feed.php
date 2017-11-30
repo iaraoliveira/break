@@ -32,13 +32,13 @@
         </p>
       </div>
       <h2><span style="font-weight: 800;"><?= $pergunta['prg_titulo']?></h2>
-      <p id="p_desc"><?=substr($pergunta['prg_descricao'], 0, 80)?></p>
-      <?php if(strlen($pergunta['prg_descricao'])>80){?>
+      <p id="p_desc"><?=substr($pergunta['prg_descricao'], 0, 70)?></p>
+
       <form action="pergunta-detalhe.php" method="post">
           <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
           <input type="submit" name="" value="Ver Mais...">
       </form>
-    <?php } ?>
+
 
     </div ::after>
 
