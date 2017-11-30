@@ -56,18 +56,61 @@
 		</div>
 		<div id="third_part">
 			<section id="section02" class="demo">
+				<img id="icon_session2" src="img/justify_img.png">
 				<div id="third_cont">
-	  			<h1 id="third">Os fins justificam <br>os meios</h1>
-					<ul id="">
+	  			<h1 id="third">Os fins <strong>justificam</strong> <br>os meios</h1>
+					<ul>
 						<li>Comunicação;</li>
 						<li>Tempo de Resposta;</li>
 						<li>Incentivo ao estudo.</li>
 					</ul>
+					<p>Necessidades presentes no dia-a-dia de um ambiente escolar.</p>
 				</div>
-				<a href="#section01"><span></span></a>
+				<a href="#section03"><span></span></a>
 			</section>
 
 		</div>
+
+		<div id="forth_part">
+			<section id="section03" class="demo">
+				<img id="icon_session3" src="img/list.png">
+				<div id="forth_cont">
+					<h1 id="forth">Assinale um 'V'<br><strong>nos objetivos.</strong></h1>
+					<!-- <ul>
+						<li>Acessibilidade;</li>
+						<li>Socialização;</li>
+						<li>Auxílio.</li>
+					</ul> -->
+					<p>Trazer uma maneira mais acessível de prover conhecimento e socialização,
+						 por meio de um espaço aberto à dúvidas e à disposição para estas serem
+						 respondidas pela comunidade.</p>
+				</div>
+				<a href="#section04"><span></span></a>
+			</section>
+
+		</div>
+
+		<div id="fifth_part">
+			<section id="section04" class="demo">
+				<img id="icon_session4" src="img/Languages.png">
+				<div id="fifth_cont">
+					<h1 id="fifth">It's<strong> OPEN SOURCE</strong>,<br> baby</h1>
+					<!-- <ul>
+						<li>Acessibilidade;</li>
+						<li>Socialização;</li>
+						<li>Auxílio.</li>
+					</ul> -->
+					<p>É tão acessível que você pode conhecer nosso código.
+						 Feito com ferramentas e linguagens de código-aberto e
+					 	 disponível em um repositório git.
+					</p>
+					
+				</div>
+				<a href="#section06"><span></span></a>
+			</section>
+
+		</div>
+
 		<div id="acessibility_part">
 			<section id="section06" class="demo">
 				<img id="keya" src="img/A Key.png"
