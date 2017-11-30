@@ -326,6 +326,7 @@ a#force_unlished:hover {
 			text-align: justify;
 			word-wrap: break-word;
 			text-indent: 30px;
+
 		}
 
 		h1#second {
@@ -351,9 +352,39 @@ a#force_unlished:hover {
 			margin: 0px;
 			padding: 100px;
 			min-height: 600px;
-			background-color: #009bdb;
+			background-color: #f44949;
 			box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
 		}
+		#third_cont {
+			position: absolute;
+			left: 8%;
+			top: 15%;
+			max-width: 500px;
+			color: #fafafa;
+			font-weight: 500;
+			font-size: 16pt;
+			text-align: left;
+			word-wrap: break-word;
+			text-indent: 30px;
+		}
+
+		h1#third {
+			color: #fafafa;
+			font-size: 28pt;
+			letter-spacing: 0.3px;
+			font-weight: 600;
+			text-align: center;
+		}
+
+
+ul {
+	margin-top: 50px;
+	list-style-type: none;
+	line-height: 36pt;
+	font-size: 20pt;
+	font-weight: 600;
+}
+
 
 	@-webkit-keyframes sdb03 {
 	  0% {
