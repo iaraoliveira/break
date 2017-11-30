@@ -85,6 +85,7 @@
 						<br>
 						<input type="submit" name="form-usuario" value="Alterar Dados">
 					</form>
+					<br>
 					<form class="" action="exclui-usuario.php" method="post">
 						<input type="hidden" name="id_usuario" value="<?=$_SESSION['id_usuario']?>">
 						<input type="submit" name="exclui-usuario" value="Excluir conta">

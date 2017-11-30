@@ -71,7 +71,7 @@ a#sair:hover {
 
 }
 
-input {
+input, select, a {
 	border-radius: 20px;
 	border-style: none;
 	padding: 8px 20px;

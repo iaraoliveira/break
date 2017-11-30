@@ -40,7 +40,7 @@ function buscaAnotacao($conexao, $id)
 function procuraAnotacao($conexao, $search, $id)
 {
     $anotacoes = array();
-    $query = "SELECT a.*, d.disc_nome, u.nome_user
+    $query = "SELECT a.*, d.disc_nome, d.disc_apelido, d.disc_back_color, u.nome_user
               FROM disciplina AS d
               JOIN anotacao AS a ON a.fk_disciplina = d.iddisciplina
               JOIN usuario AS u ON u.idusuario = a.fk_usuario
