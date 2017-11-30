@@ -357,6 +357,29 @@ a#force_unlished:hover {
 
 		}
 
+		#fifth_part a.opt {
+			background-color: transparent;
+			border-style: solid;
+			border-width: 1px;
+			text-decoration: none;
+			color: #fafafa;
+			text-align: center;
+			font-size: 14pt;
+			text-indent: 0;
+			padding: 14px 30px 40px 30px;
+			position: absolute;
+			top: 300px;
+			right: 25%;
+
+			max-width: 300px;
+			max-height: 20px;
+		}
+
+		#fifth_part a.opt:hover {
+			color: #0e0e0e;
+			background-color: rgba(255,255,255,0.8);
+		}
+
 		#second_cont {
 			position: absolute;
 			right: 8%;
