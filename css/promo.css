@@ -7,6 +7,32 @@ body {
 
 }
 
+.back_rodape {
+	background-color: #fbf3d7;
+	margin: 0px;
+	margin-bottom: 0px;
+}
+
+#rodape {
+	background-image: linear-gradient(-180deg, transparent 0%, rgba(70,70,70,0.5) 80%);
+	background-color: #444444;
+	margin: auto;
+	margin-bottom: 0px;
+	padding: 10px;
+	min-height: 100px;
+	color: rgba(255,255,255,0.6);
+}
+
+#rodape h3 {
+	padding-left: 100px;
+	font-weight: 400;
+}
+
+#rodape p {
+	padding-left: 100px;
+	font-weight: 400;
+}
+
 h1 {
 	color: #324c64;
 	font-size: 22pt;
@@ -171,7 +197,7 @@ a#tab:hover {
 
 #acessibility_part {
 	background-color: #ededed;
-
+	min-height: 800px;
 }
 #acessibility_cont {
 	color: #565656;
@@ -276,7 +302,7 @@ a#force_unlished:hover {
 			box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
 		}
 
-		#second_part a, #third_part a, #forth_part a, #fifth_part a {
+		#second_part a, #third_part a, #forth_part a, #fifth_part a, #acessibility_part a, #sixth_part a {
 			position: absolute;
 			top: 550px;
 			/*bottom: 0px;*/
@@ -291,7 +317,7 @@ a#force_unlished:hover {
 			padding: 40px;
 			border-radius: 120px;
 		}
-		#second_part  a:hover, #third_part  a:hover, #forth_part a:hover, #fifth_part a:hover {
+		#second_part  a:hover, #third_part  a:hover, #forth_part a:hover, #fifth_part a:hover, #acessibility_part a:hover, #sixth_part a:hover {
 			background-color: #d8d8d8;
 			box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 		}
@@ -356,8 +382,37 @@ a#force_unlished:hover {
 			box-sizing: border-box;
 
 		}
+		#acessibility_part a span {
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			margin-left: -12px;
+			border-left: 1px solid #464646;
+			border-bottom: 1px solid #0e0e0e;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			box-sizing: border-box;
 
-		#fifth_part a.opt {
+		}
+
+		#sixth_part a span {
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			margin-left: -12px;
+			border-left: 1px solid #464646;
+			border-bottom: 1px solid #0e0e0e;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			box-sizing: border-box;
+
+		}
+
+		#sixth_part a.opt  {
 			background-color: transparent;
 			border-style: solid;
 			border-width: 1px;
@@ -375,7 +430,44 @@ a#force_unlished:hover {
 			max-height: 20px;
 		}
 
-		#fifth_part a.opt:hover {
+		#sixth_part a.opt:hover {
+			color: #0e0e0e;
+			background-color: rgba(255,255,255,0.8);
+		}
+
+		#seventh_part a span {
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			width: 24px;
+			height: 24px;
+			margin-left: -12px;
+			border-left: 1px solid #464646;
+			border-bottom: 1px solid #0e0e0e;
+			-webkit-transform: rotate(135deg);
+			transform: rotate(135deg);
+			box-sizing: border-box;
+
+		}
+
+		#seventh_part a.opt  {
+			background-color: #fafafa;
+
+			text-decoration: none;
+			color: #fafafa;
+			text-align: center;
+			font-size: 14pt;
+			text-indent: 0;
+			padding: 35px;
+			position: absolute;
+			bottom: 100px;
+			right: 45%;
+			border-radius: 150px;
+			max-width: 300px;
+			max-height: 20px;
+		}
+
+		#seventh_part a.opt:hover {
 			color: #0e0e0e;
 			background-color: rgba(255,255,255,0.8);
 		}
@@ -477,10 +569,41 @@ a#force_unlished:hover {
 					margin: 0px;
 					padding: 100px;
 					min-height: 600px;
-					background-color: #464646;
+					background-color: #fef271;
 					box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
 				}
 				#fifth_cont {
+					position: absolute;
+					left: 30%;
+					top: 20%;
+					max-width: 500px;
+					color: #3d3d3d;
+					font-weight: 500;
+					font-size: 16pt;
+					text-align: justify;
+					word-wrap: break-word;
+					text-indent: 30px;
+
+				}
+
+				h1#fifth {
+					text-indent: 0;
+					color: #3d3d3d;
+					font-size: 28pt;
+					letter-spacing: 0.3px;
+					font-weight: 600;
+					text-align: center;
+				}
+
+
+				#sixth_part {
+					margin: 0px;
+					padding: 100px;
+					min-height: 600px;
+					background-color: #464646;
+					box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
+				}
+				#sixth_cont {
 					position: absolute;
 					right: 8%;
 					top: 20%;
@@ -494,7 +617,7 @@ a#force_unlished:hover {
 
 				}
 
-				h1#fifth {
+				h1#sixth {
 					text-indent: 0;
 					color: #fafafa;
 					font-size: 28pt;
@@ -502,6 +625,43 @@ a#force_unlished:hover {
 					font-weight: 600;
 					text-align: right;
 				}
+
+
+					#seventh_part {
+						margin: 0px;
+						padding: 100px;
+						min-height: 600px;
+
+						background-color: #444444;
+						background-image: url("../img/back_cad.jpg");
+					    background-repeat: no-repeat;
+					      background-attachment: scroll;
+					    background-position: center;;
+						box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
+					}
+					#seventh_cont {
+						position: absolute;
+						right: 10%;
+						top: 20%;
+						max-width: 500px;
+						color: #fafafa;
+						font-weight: 500;
+						font-size: 16pt;
+
+						word-wrap: break-word;
+
+
+					}
+
+					h1#seventh {
+						text-indent: 0;
+						color: #fafafa;
+						font-size: 28pt;
+						letter-spacing: 0.3px;
+						font-weight: 600;
+						text-align: center;
+					}
+
 
 #section02 ul{
 	margin-top: 50px;
@@ -517,6 +677,15 @@ a#force_unlished:hover {
 	font-size: 20pt;
 	font-weight: 600;
 	text-align: left;
+}
+#section04 ul {
+	margin-top: 50px;
+	list-style-type: none;
+	line-height: 28pt;
+	font-size: 18pt;
+	font-weight: 600;
+	text-align: center;
+	text-indent: 0;
 }
 
 #icon_session2 {
@@ -540,6 +709,42 @@ a#force_unlished:hover {
 		left: 0;
 
 }
+#icon_session5 {
+		max-width: 500px;
+		position: absolute;
+		top: 10%;
+		left: 0;
+
+}
+#icon_session6 {
+		max-width: 550px;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+}
+
+
+#force_unlished2 {
+	color: #fafafa;
+	text-decoration: none;
+
+	background-color: rgba(66, 203, 244, 0.8);
+	padding: 15px 30px;
+	border-radius: 50px;
+	margin-left: 120px;
+	position: relative;
+	top: 50px;
+	transition: box-shadow 0.5s;
+	transition: background-color 0.5s;
+}
+
+a#force_unlished2:hover {
+	background-color: rgba(66, 203, 244, 0.4);
+	box-shadow: 0px 0px 40px rgba(255,255,255,0.3);
+}
+
+
 
 	@-webkit-keyframes sdb03 {
 	  0% {
