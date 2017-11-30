@@ -66,7 +66,7 @@
 					</ul>
 					<p>Necessidades presentes no dia-a-dia de um ambiente escolar.</p>
 				</div>
-				<a href="#section03"><span></span></a>
+				<a href="#section03" title="Pular para 'objetivos'"><span></span></a>
 			</section>
 
 		</div>
@@ -76,25 +76,59 @@
 				<img id="icon_session3" src="img/list.png">
 				<div id="forth_cont">
 					<h1 id="forth">Assinale um 'V'<br><strong>nos objetivos.</strong></h1>
-					<!-- <ul>
-						<li>Acessibilidade;</li>
-						<li>Socialização;</li>
-						<li>Auxílio.</li>
-					</ul> -->
 					<p>Trazer uma maneira mais acessível de prover conhecimento e socialização,
 						 por meio de um espaço aberto à dúvidas e à disposição para estas serem
 						 respondidas pela comunidade.</p>
 				</div>
-				<a href="#section04"><span></span></a>
+				<a href="#section04" title="Pular para 'Consequências'"><span></span></a>
+			</section>
+
+		</div>
+		<div id="fifth_part">
+			<section id="section04" class="demo">
+
+				<div id="fifth_cont">
+					<h1 id="fifth">Por<strong> consequência...</strong></h1>
+					<p>
+						Isso tudo resulta em uma <i>salada</i> de resultados benéficos.
+					</p>
+					<ul>
+						<li><strong>Estimula</strong> o exercício das metérias;</li>
+						<li>Traz <strong>interesse</strong> ao estudo;</li>
+						<li><strong>Incentiva</strong> e possibilita a prática <strong>autodidata.</strong></li>
+					</ul>
+				</div>
+				<a href="#section06" title="Pular para 'Acessibilidade'"><span></span></a>
 			</section>
 
 		</div>
 
-		<div id="fifth_part">
-			<section id="section04" class="demo">
-				<img id="icon_session4" src="img/Languages.png">
-				<div id="fifth_cont">
-					<h1 id="fifth">It's<strong> OPEN SOURCE</strong>,<br> baby</h1>
+		<div id="acessibility_part">
+			<section id="section06" class="demo">
+				<img id="keya" src="img/A Key.png"
+					 alt="Tecla de teclado com letra 'A'">
+					 <img id="keyc" src="img/C Key.png"
+						 alt="Tecla de teclado com letra 'C'">
+				<img id="keys" src="img/Acessibility Key.png"
+					 alt="Tecla de teclado com símbolo da acessibilidade. Prova de que até
+								um deficiente visual pode usar é vocês estarem ouvindo isso">
+				<div id="acessibility_cont">
+					<h1 title="Pois é, prova disso é vocês estarem ouvindo esse atributo title." id="acessibility">A palavra chave:</br>
+						<span style="font-weight: 800; font-size: 34pt;
+												 letter-spacing: -1px; text-indent: 50px;">A.ces.si.bi.li.da.de</span>
+					</h1>
+					<p>Acessível a todos. Não importa a deficiência. De daltônico e T D A H,
+						à deficiente Visual ou Auditivo. </p>
+				</div>
+				<a href="#section05" title="Pular para 'Open Source'"><span></span></a>
+			</section>
+		</div>
+
+		<div id="sixth_part">
+			<section id="section05" class="demo">
+				<img id="icon_session5" src="img/Languages.png">
+				<div id="sixth_cont">
+					<h1 id="sixth">It's<strong> OPEN SOURCE</strong>,<br> baby</h1>
 					<!-- <ul>
 						<li>Acessibilidade;</li>
 						<li>Socialização;</li>
@@ -109,31 +143,22 @@
 						 Visite o repositório
 					</a>
 				</div>
-				<a href="#section06"><span></span></a>
+				<a href="#seventh_part" title="Pular para os finalmentes."><span></span></a>
 			</section>
-
 		</div>
 
-		<div id="acessibility_part">
+		<div id="seventh_part">
 			<section id="section06" class="demo">
-				<img id="keya" src="img/A Key.png"
-					 alt="Tecla de teclado com letra 'A'">
-					 <img id="keyc" src="img/C Key.png"
-	 					 alt="Tecla de teclado com letra 'C'">
-				<img id="keys" src="img/Acessibility Key.png"
-					 alt="Tecla de teclado com símbolo da acessibilidade. Prova de que até
-					 			um deficiente visual pode usar é vocês estarem ouvindo isso">
-				<div id="acessibility_cont">
-					<h1 title="Pois é, prova disso é vocês estarem ouvindo esse atributo title." id="acessibility">A palavra chave:</br>
-						<span style="font-weight: 800; font-size: 34pt;
-												 letter-spacing: -1px; text-indent: 50px;">A.ces.si.bi.li.da.de</span>
-					</h1>
-					<p>Acessível a todos. Não importa a deficiência. De daltônico e T D A H,
-						à deficiente Visual ou Sonoro. </p>
+				<img id="icon_session6" src="img/jedi_hominho.png">
+				<div id="seventh_cont">
+					<h1 id="seventh">Te convencemos? <br><strong>O que está esperando?</strong></h1>
+					<a href="cadastra.php" title="Ir para página de cadastro"
+					id="force_unlished2">Inscreva-se agora. ></a>
 				</div>
-  			<a href="#section02" title="Pular para 'Justificativa'"><span></span></a>
+				<a href="#first_part" title="Voltar para o topo." class="opt"><span></span></a>
 			</section>
 		</div>
+
 		<script>
 			$(function() {
 			  $('a[href*=#]').on('click', function(e) {
@@ -143,6 +168,12 @@
 			});
 		</script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</div>
+	<div class="back_rodape">
+		<div id="rodape">
+			<h3> Break - Protótipo de Sistema de Integração Escolar </h3>
+			<p>Iara Silva de Oliveira | Luiz Filipe Borges | Vinícius Junkes A. Almeida | Vitória de Mello Eskelsen</p>
+		</div>
 	</div>
 </body>
 </html>
