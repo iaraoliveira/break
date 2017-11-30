@@ -82,7 +82,12 @@
 
 					<form class="" action="form-altera-usuario.php" method="post">
 						<?php require 'form-usuario-disabled.php' ?>
+						<br>
 						<input type="submit" name="form-usuario" value="Alterar Dados">
+					</form>
+					<form class="" action="exclui-usuario.php" method="post">
+						<input type="hidden" name="id_usuario" value="<?=$_SESSION['id_usuario']?>">
+						<input type="submit" name="exclui-usuario" value="Excluir conta">
 					</form>
 
 
