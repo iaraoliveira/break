@@ -30,7 +30,7 @@
 
 	<div class="box-that">
 		<img id="hominho" src="img/jedi_hominho.png"
-			 alt="">
+			 alt="" title="Ilustração do garoto-propaganda do sistema em temática de Star Wars">
 
 		<div id="sub-box">
 			<h1><span id="h1_minus">COME TO THE </span>
@@ -41,17 +41,17 @@
 			<form name="cadastro" action="" method="post" onsubmit="">
 
 				<label for="nome_user">Primeiro Nome</label>
-				<input type="text" id="nome_user" title="Primeiro nome"
+				<input type="text" id="nome_user" title="Insira seu Primeiro nome"
 					   placeholder="ex.: Luke" name="nome_user"
 					   required autofocus />
 				<br/>
 
 				<label for="sobrenome_user">Sobrenome</label>
-				<input type="text" id="sobrenome_user" title="Sobrenome" placeholder="ex.: Skybreaker" name="sobrenome_user" required />
+				<input type="text" id="sobrenome_user" title="Insira seu Sobrenome" placeholder="ex.: Skybreaker" name="sobrenome_user" required />
 				<br/>
 
 				<label for="email_input">E-mail</label>
-				<input type="email" id="email" title="Email" placeholder="ex.: lukeskybreaker@break.com" required name="email"/>
+				<input title="Insira seu Email" type="email" id="email" placeholder="ex.: lukeskybreaker@break.com" required name="email"/>
 				<br/>
 
 				<label for="login">Login</label>
@@ -64,8 +64,8 @@
 
 				<div id="radio-genero">
 					<label for="sexo">Gênero</label>
-					<input type="radio" id="sexo" name="sexo" value="M"> Masculino
-					<input type="radio" id="sexo" name="sexo" value="F"> Feminino
+					<input type="radio" id="sexo" name="sexo" value="M" title="Gênero masculino"> Masculino
+					<input type="radio" id="sexo" name="sexo" value="F" title="Gênero feminino"> Feminino
 				</div>
 				<br/>
 
@@ -75,6 +75,7 @@
 
 				<label for="escolaridade">Escolaridade</label>
 				<select id="escolaridade" name="escolaridade">
+					<option id="opt" value="">Grau de escolaridade</option>
 					<option id="opt" value="Ensino Fundamental I">Ensino Fundamental I</option>
 					<option id="opt" value="Ensino Fundamental I">Ensino Fundamental II</option>
 					<option id="opt" value="Ensino Médio">Ensino Médio</option>
@@ -82,7 +83,7 @@
 				</select>
 
 				<div id="down-inputs">
-					<a href="login.php" title="Entrar">Já sou um jedi.</a>
+					<a href="login.php" title="Ir para Login">Já sou um jedi.</a>
 					<input type="submit" id="button-entry" title="wanna be a jedi, now." value="CADASTRAR"/>
 				</div>
 			</form>

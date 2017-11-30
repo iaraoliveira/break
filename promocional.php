@@ -32,7 +32,7 @@
 				<h1 id="first">Todos os seus estudos </br><span style="font-weight: 800; font-size: 26pt; letter-spacing: -1px;">na palma da sua mão.</span></h1>
 				<a href="cadastra.php" title="Come to the break side" id="force_unlished">Junte-se à galera. ></a>
 			</div>
-			<a id="first" href="#section01"><span></span></a>
+			<a id="first" title="Pular para 'o que é'" href="#section01"><span></span></a>
 		</div>
 
 		<div id="second_part">
@@ -41,12 +41,17 @@
 					 alt="garoto, 3 braços a direta e, nas mãos: indicador apontado para cima, balão de conversa e
 						  livros empilhados. Mão esquerda com celular na mão.">
 				<div id="second_cont">
-					<h1 id="second">O que é</br>
+					<h1 id="second">O que é   &nbsp;</br>
 						<span style="font-weight: 800; font-size: 34pt;
-												 letter-spacing: -1px; text-indent: 50px;">&nbsp;	"BREAK"?</span>
+												 letter-spacing: -1px; text-indent: 50px;">"BREAK"?</span>
 					</h1>
+					<p>Em palavras bonitas, uma plataforma interativa para prática dos estudos e
+						da socialização no âmbito estudantil.</p>
+
+					<p>Em palavras bonitas, uma plataforma interativa para prática dos estudos e
+						da socialização no âmbito estudantil.</p>
 				</div>
-  			<a href="#section02"><span></span></a>
+  			<a href="#section02" title="Pular para 'Justificativa'"><span></span></a>
 			</section>
 		</div>
 		<div id="third_part">
@@ -55,6 +60,26 @@
   			<a href="#section01"><span></span></a>
 			</section>
 
+		</div>
+		<div id="acessibility_part">
+			<section id="section06" class="demo">
+				<img id="keya" src="img/A Key.png"
+					 alt="Tecla de teclado com letra 'A'">
+					 <img id="keyc" src="img/C Key.png"
+	 					 alt="Tecla de teclado com letra 'C'">
+				<img id="keys" src="img/Acessibility Key.png"
+					 alt="Tecla de teclado com símbolo da acessibilidade. Prova de que até
+					 			um deficiente visual pode usar é vocês estarem ouvindo isso">
+				<div id="acessibility_cont">
+					<h1 title="Pois é, prova disso é vocês estarem ouvindo esse atributo title." id="acessibility">A palavra chave:</br>
+						<span style="font-weight: 800; font-size: 34pt;
+												 letter-spacing: -1px; text-indent: 50px;">A-ces-si-bi-li-da-de</span>
+					</h1>
+					<p>Acessível a todos. Não importa a deficiência. De daltônico e T D A H,
+						à deficiente Visual ou Sonoro. </p>
+				</div>
+  			<a href="#section02" title="Pular para 'Justificativa'"><span></span></a>
+			</section>
 		</div>
 		<script>
 			$(function() {
