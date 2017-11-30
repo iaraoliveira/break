@@ -76,24 +76,40 @@ $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
                </div>
 
            </div>
-         
+
                 </form>
                 <?php }else{ ?>
+                  <div id="anotacaozin" class="" >
 
-                  <h2><strong><?= $conteudo['titulo']?> </strong>| <?=$conteudo['descricao']?></h2>
+
+                  <h2 style="color: <?=$conteudo['disc_back_color']?>;"><strong><?= $conteudo['titulo']?> </strong>| </h2>
+                  <h3><?=$conteudo['descricao']?></h3>
                   <p class="header_space2">Postado em: <time><?=$conteudo['registro']?></time></p>
                   <p class="header_space2"><i>by <?=$conteudo['nome_user']?></i></p>
 
+                </div ::after>
+                              
+                  <div id="opt">
+                    <form action="form-altera-anotacao.php" method="post">
+                                  <input type="hidden" name="id" value="<?=$conteudo['id'] ?>"/>
+                        <div id="reply">
+                          <button id="btn_opt">
+                              <img id="btn_opt_img" src="img/edit.png" alt=""/>
+                          </button>
+                        </div>
+                    </form>
+                    <form  action="exclui-anotacao.php" method="post" class="opt">
+                                <input type="hidden" name="id" value="<?=$conteudo['id'] ?>" />
+                        <div id="reply2">
+                          <button id="btn_opt_erase">
+                              <img id="btn_opt_img" src="img/eraser.png" alt=""/>
+                          </button>
+                        </div>
+                    </form>
+                  </div>
 
-                  <form action="form-altera-anotacao.php" method="post">
-                    <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
-                    <button>Alterar</button>
-                  </form>
+                   </form>
 
-                  <form action="exclui-anotacao.php" method="post">
-                    <input type="hidden" name="id" value="<?=$conteudo['id']?>" />
-                    <button>Remover</button>
-                  </form>
                 <?php } ?>
 
       </div>

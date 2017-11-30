@@ -6,8 +6,9 @@ function alteraUsuario($conexao, $id, $nome, $sobrenome, $sexo, $dataNasc, $esco
                 sobrenome_user = '{$sobrenome}',
                 sexo = '{$sexo}',
                 dataNasc = {$dataNasc},
-                escolaridade = {$escolaridade}
+                escolaridade = '{$escolaridade}'
               WHERE idusuario={$id}";
+              echo $query;
     $resultado = mysqli_query($conexao, $query);
     return $resultado;
 }

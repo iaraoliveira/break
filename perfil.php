@@ -9,7 +9,7 @@
 	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
 
-	
+
 	<link rel="stylesheet" type="text/css" href="css/feed.css">
 	<title>Break | Perfil</title>
 	<script type="text/javascript">
@@ -50,9 +50,19 @@
 		</div>
 	</div>
 
+
 	<div class="main">
 		<div id="grad">
 			<div id="header">
+				<?php
+				if (isset($_SESSION['alert']) && isset($_SESSION['alert_tipo'])){
+				?>
+				<p class="<?=$_SESSION['alert_tipo']?>"><?=$_SESSION['alert'] ?></p>
+				<?php
+						unset($_SESSION['alert']);
+						unset($_SESSION['alert_tipo']);
+				}
+				?>
 				<div id="header_space2">
 					<h2><?php echo $_SESSION['nm_usuario'] . " " . $_SESSION['sbm_usuario'];?></h2>
 
@@ -81,15 +91,7 @@
 				</div>
 				<div id="sessao">
 					<h3>Últimos posts</h3>
-					<?php
-					if (isset($_SESSION['alert']) && isset($_SESSION['alert_tipo'])){
-					?>
-					<p class="<?=$_SESSION['alert_tipo']?>"><?=$_SESSION['alert'] ?></p>
-					<?php
-					    unset($_SESSION['alert']);
-					    unset($_SESSION['alert_tipo']);
-					}
-					?>
+
 					<?php require "ultimos-posts.php";?>
 				</div>
 				<a href="notebook.php">Ir para o meu caderno</a>

@@ -65,7 +65,7 @@ require 'dao-usuario.php';
           </select>
           <br>
 
-          <input type="button" name="alterar-usuario" value="Alterar"></input>
+          <input type="submit" name="" value="Alterar"></input>
 
         </form>
       </div>

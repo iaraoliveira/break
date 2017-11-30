@@ -1,5 +1,5 @@
 body {
-	font-family: 'Montserrat', sans-serif;	
+	font-family: 'Montserrat', sans-serif;
 	margin: 0px;
 	background: url("../img/Got-Nothing-Else-To-Do.jpg") no-repeat bottom center;
     background-color: #fbf3d7;
@@ -21,7 +21,7 @@ body {
 	padding: 0px;
 }
 
-#grad {	
+#grad {
 	background: linear-gradient(180deg, rgba(251,0,0,0), rgba(251,243,215,0.8), rgba(251,243,215, 1));
 	margin: auto;
 }
@@ -30,7 +30,7 @@ body {
 	background-color: #fbf3d7;
 	min-width: 100px;
 	min-height: 100px;
-	max-width: 800px;	
+	max-width: 800px;
 	margin: auto;
 	padding: 10px;
 }
@@ -61,7 +61,7 @@ h1 {
 	font-size: 40pt;
 	color: #fafafa;
 	font-weight: 800;
-	
+
 }
 
 h2 {
@@ -82,19 +82,19 @@ h3 {
 }
 
 #header_space1 {
-	margin-top: -120px;	
+	margin-top: -120px;
 	padding: 5px 10px 5px 20px;
 	margin-left: 10px;
 	margin-right: 400px;
 	background-color: #02858F;
 	box-shadow: 2px 2px 10px #333;
-	
+
 }
 
 #header_detalhe {
 	padding: 4px 10px 5px 10px;
 	margin: 0px -50px 0px 100px;
-	
+
 	background-color: #fafafa;
 	box-shadow: 0px 0px 5px #02858F;
 }
@@ -130,11 +130,11 @@ p {
 	background-size: cover;
     background-position: 0px -150px;
 	background-position: center;
-	
+
 	margin: auto;
 	margin-right: 0px;
 	margin-top: 50px;
-	
+
 	box-shadow: 0px 0px 210px #333333;
 }
 
@@ -148,7 +148,7 @@ p {
     background-size: cover;
     background-position: 0px -150px;
 	background-position: center;
-	
+
 	margin: auto;
 	margin-top: 50px;
 
@@ -172,7 +172,7 @@ p {
 	text-overflow: ellipsis;
 	font-size: 20pt;
 	font-weight: 500;
-	
+
 	text-decoration: none;
 	cursor: crosshair;
 }
@@ -191,21 +191,21 @@ p {
 	background-color: #fafafa;
 	max-width: 200px;
 	margin: auto auto -10px 20px;
-	
-	
+
+
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 3px;
 	padding-bottom: 20px;
-	
+
 	background-color: #009bdb;
 	float: left;
 }
 
 #abinha a:hover {
 	font-size: 100;
-	
-	
+
+
 }
 
 .perfil_imagem {
@@ -214,7 +214,7 @@ p {
     background-size: cover;
     background-position: 0px -150px;
 	background-position: center ;
-	
+
 	margin: auto;
 	margin-top: 50px;
 	margin-right: 150px;
@@ -243,13 +243,13 @@ p {
 	padding: 10px;
 	min-width: 100px;
 	min-height: 100px;
-	max-width: 800px;	
+	max-width: 800px;
 }
 
 /* TOP */
 
 .top {
-	
+
 	min-width: 100px;
 	max-width: 800px;
 	margin: 20px auto auto;
@@ -261,16 +261,16 @@ p {
 #sair {
 	padding: 6px 18px;
 	box-shadow: 0px 0px 30px #0e0e0e;
-	
+
 	border-color: #fafafa;
 	border-radius: 3px;
 	border-width: 2px;
 	border-style: solid;
-	
+
 	color: #fafafa;
 	font-size: 14pt;
 	font-weight: 600;
-	text-shadow: 0px 0px 10px #0e0e0e;	
+	text-shadow: 0px 0px 10px #0e0e0e;
 	text-decoration: none;
 }
 
@@ -294,7 +294,7 @@ a#sair:hover {
 	max-width: 70px;
 	max-height: 70px;
 	float: left;
-	
+
 	padding-top: 2px;
 }
 
@@ -317,10 +317,10 @@ a#sair:hover {
 
 
 #bg_video{
-	
-	
+
+
 	/*background: url(images/torre.jpg) no-repeat;*/
-	background-size: cover; 
+	background-size: cover;
 	box-shadow: 2px 5px 20px #c3c3c3;
 	min-height: 100px;
 	min-width: 200px;
@@ -332,14 +332,14 @@ a#sair:hover {
 	margin: auto;
 	padding: 10px;
 	position: relative;
-	
-	
+
+
     left: 0;
     top: 50%;
     width: 100%;
     text-align: center;
     font-size: 18px;
-	
+
 	min-height: 100px;
 	min-width: 200px;
 	max-width: 1000px;
@@ -348,24 +348,24 @@ a#sair:hover {
 
 .list {
 	list-style-type: none;
-	
-	
+
+
 }
 
 #sessao {
-	
+
 }
 
 #opc {
 	padding: 10px;
-	
-	
+
+
 }
 
 @media screen and (max-width: 700px) {
 	#sobre_topo_imagem {
 		display: none;
-		
-	}	
-	
+
+	}
+
 }

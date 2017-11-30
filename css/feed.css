@@ -405,8 +405,8 @@ a#tab:hover {
 		margin-left: 10px;
 		font-weight: 400;
 		font-size: 16pt;
-		color: #fafafa;
-		text-align: left;
+
+		text-align: right;
 	}
 
 	p {
@@ -597,6 +597,18 @@ a#tab:hover {
 	z-index: 2;
 	box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
+
+#anotacaozin {
+	margin: auto;
+	padding: 10px;
+	background-color: #fafafa;
+	border-radius: 20px;
+	border-bottom-right-radius: 80px/3px;
+	position: relative;
+	z-index: 2;
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
 
 #balaozin:after {
 	content: '';

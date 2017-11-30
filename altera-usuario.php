@@ -1,5 +1,5 @@
 <?php
-require 'config-painel.php';
+require 'header.php';
 require 'dao-usuario.php';
 
 $id = $_SESSION['id_usuario'];
@@ -13,16 +13,12 @@ $escolaridade=$_POST['escolaridade_user'];
 
 if(alteraUsuario($conexao, $id, $nome, $sobrenome, $sexo, $dataNasc, $escolaridade)){
 
-?>
-<p class="text-success">Usuario alterado com sucesso!</p>
-
-<?php
-}
-else
-{
-    $msg = mysqli_error($conexao);
-?>
-<p class="text-danger">O usuario não foi alterado: <?=$msg ?></p>
-<?php
-}
-?>
+  $_SESSION['alert_tipo'] = "text_success";
+  $_SESSION["alert"] = "Usuario alterado com sucesso.";
+  header("Location: perfil.php");
+  }else{
+  $msg = mysqli_error($conexao);
+  $_SESSION['alert_tipo'] = "text_danger";
+  $_SESSION["alert"] = "Não foi possível alterar seus dados: \n".$msg;
+  header("Location: perfil.php");
+  }
