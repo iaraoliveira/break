@@ -48,16 +48,23 @@
 					<p>Em palavras bonitas, uma plataforma interativa para prática dos estudos e
 						da socialização no âmbito estudantil.</p>
 
-					<p>Em palavras bonitas, uma plataforma interativa para prática dos estudos e
-						da socialização no âmbito estudantil.</p>
+					<p>Simplificando, é uma ótima ferramenta para ajudar nos estudos. É <strong>fácil,
+						rápido</strong> e <strong>acessível</strong> a todos.</p>
 				</div>
   			<a href="#section02" title="Pular para 'Justificativa'"><span></span></a>
 			</section>
 		</div>
 		<div id="third_part">
 			<section id="section02" class="demo">
-  			<h1>Tudo bem? #4</h1>
-  			<a href="#section01"><span></span></a>
+				<div id="third_cont">
+	  			<h1 id="third">Os fins justificam <br>os meios</h1>
+					<ul id="">
+						<li>Comunicação;</li>
+						<li>Tempo de Resposta;</li>
+						<li>Incentivo ao estudo.</li>
+					</ul>
+				</div>
+				<a href="#section01"><span></span></a>
 			</section>
 
 		</div>
