@@ -1,0 +1,4 @@
+Time : 14:34:25
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fk_tipo_user' in 'field list'
+Raw SQL : INSERT INTO usuario (nome_user, sobrenome_user, email, login, senha, sexo, dataNasc, escolaridade, fk_tipo_user) 
+							   VALUES (:nome, :sobrenome, :email, :login, :senha, :sexo, :dataNasc, :escolaridade, 1)

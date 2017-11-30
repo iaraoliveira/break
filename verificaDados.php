@@ -21,8 +21,8 @@
 		$banco->bind('dataNasc',$_POST['dataNasc']);
 		$banco->bind('escolaridade',$_POST['escolaridade']);
 
-		$query = "INSERT INTO usuario (nome_user, sobrenome_user, email, login, senha, sexo, dataNasc, escolaridade, fk_tipo_user)
-							   VALUES (:nome, :sobrenome, :email, :login, :senha, :sexo, :dataNasc, :escolaridade, 1)";
+		$query = "INSERT INTO usuario (nome_user, sobrenome_user, email, login, senha, sexo, dataNasc, escolaridade)
+							   VALUES (:nome, :sobrenome, :email, :login, :senha, :sexo, :dataNasc, :escolaridade)";
 
 		$insercao = $banco->query($query);
 
@@ -51,7 +51,7 @@
 				$banco->CloseConnection();
 				header("Location: boas-vindas.php");
 			}
-			
+
 		}else{
 			echo "<script>alert('A unknown bug has appeared.. :c');</script>";
 		}
