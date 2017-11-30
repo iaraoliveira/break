@@ -104,7 +104,10 @@
 						 Feito com ferramentas e linguagens de código-aberto e
 					 	 disponível em um repositório git.
 					</p>
-					
+					<a href="https://github.com/iara99oliveira/break" target="_blank"
+						 title="Acessar repositório no git hub" class="opt">
+						 Visite o repositório
+					</a>
 				</div>
 				<a href="#section06"><span></span></a>
 			</section>
@@ -123,7 +126,7 @@
 				<div id="acessibility_cont">
 					<h1 title="Pois é, prova disso é vocês estarem ouvindo esse atributo title." id="acessibility">A palavra chave:</br>
 						<span style="font-weight: 800; font-size: 34pt;
-												 letter-spacing: -1px; text-indent: 50px;">A-ces-si-bi-li-da-de</span>
+												 letter-spacing: -1px; text-indent: 50px;">A.ces.si.bi.li.da.de</span>
 					</h1>
 					<p>Acessível a todos. Não importa a deficiência. De daltônico e T D A H,
 						à deficiente Visual ou Sonoro. </p>
