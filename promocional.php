@@ -93,7 +93,7 @@
 						Isso tudo resulta em uma <i>salada</i> de resultados benéficos.
 					</p>
 					<ul>
-						<li><strong>Estimula</strong> o exercício das metérias;</li>
+						<li><strong>Estimula</strong> o exercício das matérias;</li>
 						<li>Traz <strong>interesse</strong> ao estudo;</li>
 						<li><strong>Incentiva</strong> e possibilita a prática <strong>autodidata.</strong></li>
 					</ul>
