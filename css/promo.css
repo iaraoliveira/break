@@ -169,7 +169,62 @@ a#tab:hover {
 		box-sizing: border-box;
 	}
 
+#acessibility_part {
+	background-color: #ededed;
 
+}
+#acessibility_cont {
+	color: #565656;
+
+	position: absolute;
+	right: 10%;
+	max-width: 500px;
+
+	font-weight: 500;
+	font-size: 16pt;
+	text-align: justify;
+	word-wrap: break-word;
+	text-indent: 30px;
+}
+
+#acessibility_cont p {
+	position: relative;
+	right: 10%;
+	top: 100px;
+	line-height: 23pt;
+}
+
+#acessibility {
+	color: #565656;
+	text-align: right;
+}
+
+#keya {
+	max-width: 150px;
+	position: absolute;
+	top: 20%;
+	left: 14%;
+	transform: rotate(15deg);
+	opacity: .5;
+}
+#keyc {
+	max-width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 28%;
+	transform: rotate(-5deg);
+	opacity: .5;
+}
+
+
+#keys {
+	max-width: 250px;
+	position: absolute;
+	top: 40%;
+	left: 14%;
+	transform: rotate(-25deg);
+
+}
 
 #force_unlished {
 	color: #fafafa;
@@ -217,7 +272,7 @@ a#force_unlished:hover {
 			margin: 0px;
 			padding: 100px;
 			min-height: 600px;
-			background-color: #009bdb;
+			background-color: #528dc2;
 			box-shadow: -2px -2px 30px rgba(173, 173, 173, 0.4);
 		}
 
@@ -262,8 +317,15 @@ a#force_unlished:hover {
 
 		#second_cont {
 			position: absolute;
-			right: 5%;
-
+			right: 8%;
+			top: 15%;
+			max-width: 500px;
+			color: #fafafa;
+			font-weight: 500;
+			font-size: 16pt;
+			text-align: justify;
+			word-wrap: break-word;
+			text-indent: 30px;
 		}
 
 		h1#second {
@@ -271,15 +333,16 @@ a#force_unlished:hover {
 			font-size: 28pt;
 			letter-spacing: 0.3px;
 			font-weight: 600;
+			text-align: right;
 		}
 		#hominho{
 			position: absolute;
 			left: 20%;
-			top: 40%;
+			top: 30%;
 			margin-left: -170px;
 			margin-top: -80px;
 
-			max-width: 380px;
+			max-width: 400px;
 		}
 
 	/* SESSION 2 */
