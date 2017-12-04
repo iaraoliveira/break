@@ -128,12 +128,10 @@
 							<?php
                 foreach ($anotacoes as $anotacao) :
                 ?>
-								<div id="anotacaozin" class="" >
+									<div class="">
+										<?=$anotacao['anota_descricao'] ?>
+									</div>
 
-
-								<h2 style="color: <?=$anotacao['disc_back_color']?>;"><strong><?= $anotacao['anota_titulo']?> </strong>| </h2>
-								<h3><?=$anotacao['anota_descricao']?></h3>
-							
 									<div class="baixo_resposta">
 										<p class="header_space2"><a href="notebook.php">Ir para o meu caderno</a></p>
 										<p class="header_space2">
@@ -143,7 +141,6 @@
 												Postado em: <time><?=$anotacao['anota_registro']?></time>
 										</p>
 									</div>
-								</div>
 									<br>
 								<?php
         				endforeach;

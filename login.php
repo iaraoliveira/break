@@ -17,15 +17,6 @@
 	<title>	Break | Entra aí</title>
 </head>
 <body>
-	<?php
-	if (isset($_SESSION['alert']) && isset($_SESSION['alert_tipo'])){
-	?>
-	<p class="<?=$_SESSION['alert_tipo']?>"><?=$_SESSION['alert'] ?></p>
-	<?php
-			unset($_SESSION['alert']);
-			unset($_SESSION['alert_tipo']);
-	}
-	?>
 
 	<div class="box-that">
 		<img id="hominho" src="img/Hominho.png"

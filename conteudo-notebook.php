@@ -88,8 +88,7 @@ $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
                   <p class="header_space2"><i>by <?=$conteudo['nome_user']?></i></p>
 
                 </div ::after>
-                <hr>
-                <br>
+                              
                   <div id="opt">
                     <form action="form-altera-anotacao.php" method="post">
                                   <input type="hidden" name="id" value="<?=$conteudo['id'] ?>"/>
@@ -99,7 +98,6 @@ $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
                           </button>
                         </div>
                     </form>
-                  
                     <form  action="exclui-anotacao.php" method="post" class="opt">
                                 <input type="hidden" name="id" value="<?=$conteudo['id'] ?>" />
                         <div id="reply2">

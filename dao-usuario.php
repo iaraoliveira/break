@@ -5,9 +5,9 @@ function alteraUsuario($conexao, $id, $nome, $sobrenome, $sexo, $dataNasc, $esco
                 nome_user = '{$nome}',
                 sobrenome_user = '{$sobrenome}',
                 sexo = '{$sexo}',
-                dataNasc = '{$dataNasc}',
+                dataNasc = {$dataNasc},
                 escolaridade = '{$escolaridade}'
-              WHERE idusuario={$id};";
+              WHERE idusuario={$id}";
               echo $query;
     $resultado = mysqli_query($conexao, $query);
     return $resultado;
@@ -23,19 +23,4 @@ function procuraUsuario($conexao, $search){
   }
   return $usuarios;
 
-}
-
-function removePerguntaWhereUsuario($conexao, $id){
-    $query = "DELETE * FROM pergunta WHERE fk_usuario={$id};";
-    return mysqli_query($conexao, $query);
-}
-
-function removeAnotacaoWhereUsuario($conexao, $id){
-    $query = "DELETE * FROM anotacao WHERE fk_usuario={$id};";
-    return mysqli_query($conexao, $query);
-}
-
-function removeUsuario($conexao, $id){
-    $query = "DELETE FROM usuario WHERE idusuario = {$id};";
-    return mysqli_query($conexao, $query);
 }
