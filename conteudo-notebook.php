@@ -79,16 +79,19 @@ $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
 
                 </form>
                 <?php }else{ ?>
-                  <div id="anotacaozin" class="" >
 
-
+                <div id="anotacaozin">
                   <h2 style="color: <?=$conteudo['disc_back_color']?>;"><strong><?= $conteudo['titulo']?> </strong>| </h2>
-                  <h3><?=$conteudo['descricao']?></h3>
-                  <p class="header_space2">Postado em: <time><?=$conteudo['registro']?></time></p>
-                  <p class="header_space2"><i>by <?=$conteudo['nome_user']?></i></p>
+                  <p><?=$conteudo['descricao']?></p>
+                </div>
+                <div id="baixo_balaozin">
+                    <p class="header_space2">
+                        Postado em: <time><?=$conteudo['registro']?></time>
+                    </p>
+                    <p class="header_space2">
+                      <i>by <?=$conteudo['nome_user']?></i>
+                    </p>
 
-                </div ::after>
-                              
                   <div id="opt">
                     <form action="form-altera-anotacao.php" method="post">
                                   <input type="hidden" name="id" value="<?=$conteudo['id'] ?>"/>
@@ -107,6 +110,7 @@ $materias = listaMateriasDoPostWhereUsuario($conexao, $id);
                         </div>
                     </form>
                   </div>
+                </div>
 
                    </form>
 
