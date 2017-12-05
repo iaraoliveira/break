@@ -4,7 +4,6 @@
 	require 'dao-pergunta.php';
 	require 'dao-resposta.php';
 
-
   $id = $_POST['id'];
   $pergunta = buscaPergunta($conexao, $id);
 	$respostas = listaRespostaWherePergunta($conexao, $id);
@@ -22,7 +21,7 @@
 	});
 	</script>
 
-	<title>Break</title>
+	<title>Break | <?=$pergunta['disc_apelido']?> - <?=$pergunta['prg_titulo']?></title>
 
 </head>
 <body onload="loading();">

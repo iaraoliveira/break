@@ -5,7 +5,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/feed.css">
 	<script type="text/javascript" src="js/feed.js"></script>
-<title>Break | Perfil</title>
+<title>Break | Notebook</title>
 </head>
 <body onload="loading()">
 	<?php
@@ -31,10 +31,10 @@
 				</div>
 				<div class="">
 					<form class="" action="form-anotacao.php" method="post">
-						<button name="go-to-form-anotacao">Adicione uma Anotação</button>
+						<button id="opcao" name="go-to-form-anotacao">Adicione uma Anotação</button>
 					</form>
 					<form class="" action="index.php" method="post">
-						<button name="go-to-index">Faça uma pergunta</button>
+						<button  id="opcao" name="go-to-index">Faça uma pergunta</button>
 
 					</form>
 				</div>

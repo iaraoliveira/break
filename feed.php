@@ -11,22 +11,12 @@
 <script type="text/javascript" src="js/filtro-conteudo.js"></script>
 <div id="text_content">
 
-      <input type="radio" onclick="filterSelection('all')" name="materia" checked> Todas as Matérias
-  <?php
-    foreach ($materias as $materia) {
-  ?>
-      <input type="radio" onclick="filterSelection('<?=$materia['disc_apelido']?>')" name="materia"> <?=$materia['disc_apelido']?>
-
-  <?php
-    }
-   ?>
-
   <?php
     foreach ($perguntas as $pergunta) :
   ?>
   <div id="topic" class="filterDiv <?=$pergunta['disc_apelido']?> show">
     <div id="balaozin">
-      <div id="tag_disc" style="background-color: <?=$pergunta['disc_back_color']?>;">
+      <div id="tag_disc" title="Disciplina: <?=$pergunta['disc_nome']?>" style="background-color: <?=$pergunta['disc_back_color']?>;">
         <p id="text_tag" style="color:  <?=$pergunta['disc_textcolor']?>;">
           <?=$pergunta['disc_apelido']?>
         </p>
@@ -36,7 +26,7 @@
 
       <form action="pergunta-detalhe.php" method="post">
           <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
-          <input type="submit" name="" value="Ver Mais...">
+          <input type="submit" name="ver_mais" id="ver_mais" value="Ver Mais...">
       </form>
 
 
@@ -56,7 +46,7 @@
           <form action="pergunta-detalhe.php" method="post">
               <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
               <div id="reply">
-                <button id="btn_opt">
+                <button id="btn_opt" title="Responder pergunta">
                     <img id="btn_opt_img" src="img/reply.png" alt=""/>
                 </button>
               </div>
@@ -67,17 +57,17 @@
         ?>
           <div id="opt">
             <form action="form-altera-pergunta.php" method="post">
-                          <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>"/>
+                <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>"/>
                 <div id="reply">
-                  <button id="btn_opt">
+                  <button id="btn_opt" title="Editar pergunta">
                       <img id="btn_opt_img" src="img/edit.png" alt=""/>
                   </button>
                 </div>
             </form>
             <form  action="exclui-pergunta.php" method="post" class="opt">
-                        <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
+                <input type="hidden" name="id" value="<?=$pergunta['idpergunta'] ?>" />
                 <div id="reply2">
-                  <button id="btn_opt_erase">
+                  <button id="btn_opt_erase" title="Apagar pergunta">
                       <img id="btn_opt_img" src="img/eraser.png" alt=""/>
                   </button>
                 </div>

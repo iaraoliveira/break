@@ -7,10 +7,3 @@
 .show {
     display: block;
 }
-
-#materia {
-	padding: 10px;
-  position: relative;
-  max-width: 50px;
-  text-align: left;
-}

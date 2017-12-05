@@ -31,7 +31,7 @@
 
   function listaPergunta($conexao){
       $perguntas = array();
-      $resultado = mysqli_query($conexao, "SELECT p.*, d.disc_nome, d.disc_textcolor, d.disc_back_color, d.disc_apelido, u.nome_user
+      $resultado = mysqli_query($conexao, "SELECT p.*, d.disc_nome, d.*, u.nome_user
                                             FROM disciplina AS d
                                               JOIN pergunta AS p ON p.fk_disciplina = d.iddisciplina
                                               JOIN usuario AS u ON u.idusuario = p.fk_usuario
@@ -45,7 +45,7 @@
 
   function listaUltimosPostsUsuario($conexao, $id){
       $perguntas = array();
-      $resultado = mysqli_query($conexao, "SELECT p.*, d.disc_nome, d.disc_textcolor, d.disc_back_color, d.disc_apelido, u.nome_user
+      $resultado = mysqli_query($conexao, "SELECT p.*, d.*, u.nome_user
                                             FROM disciplina AS d
                                               JOIN pergunta AS p ON p.fk_disciplina = d.iddisciplina
                                               JOIN usuario AS u ON u.idusuario = p.fk_usuario
@@ -65,7 +65,7 @@
   }
 
   function buscaPergunta($conexao, $id){
-      $query = "SELECT p.*, d.disc_nome, u.nome_user
+      $query = "SELECT p.*, d.*, u.nome_user
                 FROM disciplina AS d
                   JOIN pergunta AS p ON p.fk_disciplina = d.iddisciplina
                   JOIN usuario AS u ON u.idusuario = p.fk_usuario

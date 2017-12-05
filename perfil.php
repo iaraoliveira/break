@@ -2,14 +2,9 @@
 	/* perfil.php */
 	require 'header.php';
 	require 'dados-perfil.php';
-
-
-
 	/*$codigo = $_GET['idusuario'];
 	$cover = $banco->row("select ftcover from usuario where idusuario=:cod;");*/
 ?>
-
-
 	<link rel="stylesheet" type="text/css" href="css/feed.css">
 	<title>Break | Perfil</title>
 	<script type="text/javascript">
@@ -52,6 +47,10 @@
 
 
 	<div class="main">
+		<div id="tabs" style="top: 0px;">
+			<a href="notebook.php" id="tab" title="Seu caderno">
+				<img id="icon" src="img/notes.png" alt="Caderno"> </a>
+		</div>
 		<div id="grad">
 			<div id="header">
 				<?php
@@ -73,27 +72,15 @@
 		<div class="back_main">
 			<div id="content">
 				<div id="sessao">
-					<div id="opc">
-						<img href="perfil/galera.php" name="caderno" alt="Dados Cadastrais"/>
+					<div id="text_content">
+						<h3>Dados pessoais</h3>
+
+						<form class="form-altera" action="form-altera-usuario.php" method="post">
+							<?php require 'form-usuario-disabled.php' ?>
+							<input type="submit" name="form-usuario" value="Alterar Dados">
+						</form>
+
 					</div>
-				</div>
-				<div id="sessao">
-					<h3>Dados pessoais</h3>
-
-					<form class="" action="form-altera-usuario.php" method="post">
-						<?php require 'form-usuario-disabled.php' ?>
-						<br>
-						<input type="submit" name="form-usuario" value="Alterar Dados">
-					</form>
-					<br>
-					<form class="" action="exclui-usuario.php" method="post">
-						<input type="hidden" name="id_usuario" value="<?=$_SESSION['id_usuario']?>">
-						<input type="submit" name="exclui-usuario" value="Excluir conta">
-					</form>
-
-
-
-
 				</div>
 				<div id="sessao">
 					<h3>Últimos posts</h3>

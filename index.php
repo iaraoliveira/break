@@ -31,13 +31,15 @@
 				<div id="header_space2">
 					<form id="postar" action="adiciona-pergunta.php" method="post">
 						<div class="post_area">
-							<textarea id="title_perg" onkeyup="ajustarTamanho(this)" placeholder="Insira um título"
+							<textarea id="title_perg" onkeyup="ajustarTamanho(this)"
+												placeholder="Insira um título"
 												name="title_perg" required autofocus></textarea>
-							<textarea onkeyup="ajustarTamanho(this)" placeholder="Pergunte o que quiser. Não escondemos nada :p"
+							<textarea onkeyup="ajustarTamanho(this)"
+												placeholder="Pergunte o que quiser. Não escondemos nada :p"
 												name="pergunta" required></textarea>
-							<div id="post_btns">
 
-								<select class="" name="id_disciplina" required>
+							<div id="post_btns">
+								<select class="drop_down" id="btn_opt"  name="id_disciplina" required title="Escolha a disciplina">
 										<option value="">Disciplina</option>
 											<?php foreach($disciplinas as $disciplina) : ?>
 					        			<option value="<?=$disciplina['iddisciplina']?>">
@@ -46,8 +48,8 @@
 					        <?php endforeach ?>
 								</select>
 
-								<button type="button" id="btn_opt" onclick="show_tools()">
-										<img id="btn_opt_img" src="img/sum_icon.png" alt="+-*:" title="Usar símbolos Matemáticos">
+								<button type="button" id="btn_opt" title="Usar símbolos Matemáticos" onclick="show_tools()">
+										<img id="btn_opt_img" src="img/sum_icon.png" alt="Usar símbolos Matemáticos"  title="Usar símbolos Matemáticos">
 								</button>
 
 								<input type="submit" value="POSTAR" id="btn_posta"/>
